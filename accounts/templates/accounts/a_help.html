@@ -1,0 +1,283 @@
+{% extends 'accounts/main.html' %}
+
+
+{% load static %}
+{% block content %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+    <title>TO-DO</title>
+</head>
+
+
+<style>
+
+  body {
+  background-image: url('../images/to_do/body.jpg' )
+
+}
+
+.title-head {
+    color: white;
+}
+
+.desc-head {
+    color: white;
+}
+
+.del-head {
+    color: white;
+}
+
+hr {
+    border-top: 1px solid white;
+}
+
+
+
+
+
+
+
+
+
+ @media (min-width:992px){.container,.container-lg,.container-md,.container-sm{max-width:960px}}@media (min-width:1200px){.container,.container-lg,.container-md,.container-sm,.container-xl{max-width:1140px}}
+
+
+ .col-sm-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-sm-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}
+
+
+ .col-sm-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}
+
+
+
+ .col-sm-7{-ms-flex:0 0 58.333333%;flex:0 0 58.333333%;max-width:58.333333%}
+
+
+
+ .col-md-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}
+
+
+
+ .col-md-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}
+
+
+
+ select.form-control[multiple],select.form-control[size]{height:auto}textarea.form-control{height:auto}
+
+
+
+ .form-group{margin-bottom:1rem}
+
+
+
+
+
+
+
+ .btn-success{color:#fff;background-color:#28a745;border-color:#28a745}
+
+
+
+ .btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545}
+
+
+
+
+
+ .btn-block{display:block;width:100%}
+
+
+
+#head{
+text-align:center;
+color:#FFF;
+margin-top:20px;
+margin-bottom:50px;
+}
+
+body
+{
+background:black;
+}
+
+ footer{
+        margin-top:95px;
+        margin-bottom:15px;
+        color: #fff;
+        }
+
+#tasks
+{
+color:#fff;}
+
+
+
+
+
+</style>
+<body>
+
+    <h1 id="head">TO - DO</h1>
+
+    <div class="container">
+            <form method="POST" action="{% url 'to_do' %}" enctype="multipart/form-data">
+ {% csrf_token %}
+        <div class="row my-5">
+            <div class="col-md-4">
+
+                    <div class="card">
+                    <div class="card-body">
+                        <form id="form-Task"    >
+                            <div class="form-group">
+
+                                <input type="text" id="title" class="form-control" maxlength="50" autocomplete="off"
+                                    placeholder="Title" required name="title">
+                            </div>
+                            <div class="form-group">
+
+                                <textarea type="text" id="description" cols="30" rows="10" class="form-control"
+                                    maxlength="500" autocomplete="off" placeholder="Description" required name="description"></textarea>
+                            </div>
+
+                                     <button type="submit" class="btn btn-success btn-block">Save</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="col-md-8">
+                <div class="row">
+
+                    <div class="col-sm-3 text-left title-head">
+
+
+                        <p class="font-weight-bold" >Title</p><hr>
+{{reminder.title}}
+
+                        </div>
+
+
+                    <div class="col-sm-6 text-left desc-head">
+                        <p class="font-weight-bold">Description</p><hr>
+{{reminder.description}}
+
+                    </div>
+                    <div class="col-sm-3 text-right del-head">
+                        <p class="font-weight-bold">Delete</p><hr>
+
+                    </div>
+                </div>
+
+
+                <div style="color:black;background-color:#fff">
+                 </div>
+                <div id="tasks"> </div>
+
+
+
+            </div>
+
+        </div>
+            </form>
+    </div>
+
+    <script >
+        document.getElementById('form-Task').addEventListener('submit', saveTask);
+
+// Save new To-Do
+function saveTask(e) {
+
+  let title = document.getElementById('title').value;
+  let description = document.getElementById('description').value;
+{{user.username}}
+
+  let task = {
+    title,
+    description
+  };
+
+  if (localStorage.getItem('tasks') === null) {
+    let tasks = [];
+    tasks.push(task);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  } else {
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
+    tasks.push(task);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+
+  getTasks();
+
+  // Reset form-Task
+  document.getElementById('form-Task').reset();
+  e.preventDefault();
+
+}
+
+// Delete To-Do
+function deleteTask(title) {
+
+  let tasks = JSON.parse(localStorage.getItem('tasks'));
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].title == title) {
+      tasks.splice(i, 1);
+    }
+  }
+
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+  getTasks();
+}
+
+// Show To-Do List
+function getTasks() {
+
+  let tasks = JSON.parse(localStorage.getItem('tasks'));
+  let tasksView = document.getElementById('tasks');
+  tasksView.innerHTML = '';
+
+  for (let i = 0; i < tasks.length; i++) {
+    let title = tasks[i].title;
+    let description = tasks[i].description;
+
+    tasksView.innerHTML +=
+      `<div class="card mb-3">
+        <div class="card-body">
+        <div class="row">
+          <div class="col-sm-3 text-left">
+            <p>${title}</p>
+          </div>
+          <div class="col-sm-7 text-left">
+            <p>${description}</p>
+          </div>
+          <div class="col-sm-2 text-right">
+            <a href="#" onclick="deleteTask('${title}')" class="btn btn-danger ml-5">X</a>
+          </div>
+        </div>
+       </div>
+      </div>`;
+  }
+
+}
+
+getTasks();
+    </script>
+
+</body>
+
+</html>
+
+
+
+<footer><p class="text-center">Copyright @2021 | Designed With by <a href="#">D-CARE</a></p></footer>
+
+{% endblock %}

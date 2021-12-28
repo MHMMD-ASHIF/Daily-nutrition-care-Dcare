@@ -1,0 +1,287 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title >Foods For Brain</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:300px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.1);
+    opacity:1;
+    }
+
+    .container .card .circle
+    {
+    position: relative;
+    width:100%;
+    height:100%;
+    background:#000;
+    clip-path:circle(220px at center 0);
+    text-align:center;
+    }
+    .container .card .circle h2
+    {
+    color:#fff;
+    font-size:4.5em;
+    padding:30px 0;
+    }
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:60%;
+        clip-path:circle(220px at center 0);
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>FOODS FOR LUNGS</h1>
+
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+          <img src="{% static 'images/lungs/apple.jpg'%}"  >
+        </div>
+        <div class="content">
+            <h2>Apple</h2><br>
+            <p>Apples. Research has shown that regularly eating apples may help promote lung function. For example, studies show that apple intake is associated with a slower decline in lung function in ex-smokers, and it helps to improve lungs health.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/lungs/beetroot.jpg'%}" >
+        </div>
+        <div class="content">
+            <h2>Beetroot</h2><br>
+
+            <p>The vibrantly colored root and greens of the beetroot plant contain compounds that optimize lung function. Beetroot and beet greens are rich in nitrates. Nitrates help relax blood vessels, reduce blood pressure, and optimize oxygen <br> uptake.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img src="{% static 'images/lungs/blueberries.png' %}" >
+        </div>
+        <div class="content">
+                        <h2>Blueberries</h2><br>
+
+            <p> Blueberry intake was associated with the slowest rate of decline in lung function and that consuming 2 or more servings of blueberries per week slowed lung function decline by up to 38%, compared with low or no blueberry intake. </p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/lungs/turmeric.jpg'%}" >
+        </div>
+        <div class="content">
+                        <h2>Turmeric</h2><br>
+
+            <p> Daily consumption of turmeric helps in reducing the inflammation in the air passage.The presence of a compound called curcumin in turmeric it cleansing the lungs naturally and helps in detoxification of the body, which further helps in strengthening the immunity.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/lungs/greentea.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Green Tea</h2><br>
+
+            <p>  Green tea contains many antioxidants that may help reduce inflammation in the lungs. These compounds may even protect lung tissue from the harmful effects of<br> smoke inhalation.It helps to improve lungs health.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/lungs/pumkin.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Pumpkin</h2><br>
+
+            <p>The brightly colored flesh of pumpkins contains a variety of lung-health-promoting plant compounds.Especially rich in carotenoids, including beta carotene, lutein, and zeaxanthin all of which have powerful antioxidant and anti-inflammatory properties.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+      <img src="{% static 'images/lungs/red.jpg' %}" >
+
+        </div>
+        <div class="content">
+                        <h2>Red Cabbage</h2><br>
+
+            <p>Anthocyanin intake has been linked to a reduced decline in lung function ( 23 ). What's more, cabbage is packed with fiber. Studies show that people who consume more fiber have better lung function than those who consume low amounts of fiber.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/lungs/tomato.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Tomato</h2><br>
+
+            <p>Tomatoes products are among the richest dietary sources of lycopene, a carotenoid antioxidant that has been associated with improved lung health. It reduce airway inflammation in people with asthma and improve lung function in people with COPD.</p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/lungs/yogurt.jpg'%}"  >
+
+        </div>
+        <div class="content">
+                        <h2>Yogurt</h2><br>
+
+            <p>There is evidence that consuming the healthy bacteria found in yogurt will help your lung tissue stay healthier. Specifically, it can stimulate the production of interleukin cells which<br> decreases your risk of asthma inflammation.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/lungs/oliveoil.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Olive Oil</h2><br>
+
+            <p>It has monounsaturated fatty acids, which can help reduce inflammation, and alpha-tocopherol, a form of vitamin E associated with better lung function. Caffeine has a similar effect as the drug therophyllin, which opens up the airways.</p>
+        </div>
+    </div>
+
+
+    
+    
+
+
+
+
+
+
+         <div class="card">
+        <div class="circle">
+<img src="{% static 'images/lungs/cocoa.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Cocoa</h2><br>
+
+            <p>Cacao products like dark chocolate are high in flavonoid antioxidants and contain a compound called theobromine, which helps relax the airways in the lungs. Cocoa intake has been associated with a lower risk of allergic respiratory symptoms .</p>
+        </div>
+    </div>
+
+
+             <div class="card">
+        <div class="circle">
+       <img src="{% static 'images/lungs/swiss.jpg'%}">
+        </div>
+        <div class="content">
+                        <h2>Swiss chard</h2><br>
+
+            <p>Swiss chard is a dark leafy green that's high in magnesium. Magnesium helps protect against inflammation, and it helps bronchioles — tiny airways inside your lungs — stay relaxed, preventing airway restriction.which helps to keep your lungs healthier. </p>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% endblock %}

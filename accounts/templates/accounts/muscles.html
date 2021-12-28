@@ -1,0 +1,274 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title >Foods For Brain</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:300px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.1);
+    opacity:1;
+    }
+
+    .container .card .circle
+    {
+    position: relative;
+    width:100%;
+    height:100%;
+    background:#000;
+    clip-path:circle(220px at center 0);
+    text-align:center;
+    }
+    .container .card .circle h2
+    {
+    color:#fff;
+    font-size:4.5em;
+    padding:30px 0;
+    }
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:60%;
+        clip-path:circle(220px at center 0);
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>FOODS FOR MUSCLES</h1>
+
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+          <img src="{% static 'images/muscles/eggs.jpg' %}" >
+        </div>
+        <div class="content">
+            <h2>Eggs</h2><br>
+            <p>Eggs stimulate muscle growth and repair even more than just eating egg whites alone. <br>Besides being packed with protein, the egg yolk contains important vitamins and minerals including vitamins A, D, B12, iron, folate and zinc.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/muscles/nuts.jpg' %}">
+        </div>
+        <div class="content">
+            <h2>Nuts</h2><br>
+
+            <p>Cashew nuts support muscle building. Cashews contain 18 grams of protein per 100 grams and are therefore an indispensable source of vegan protein. The amino acids contained in them not only help to build and maintain muscles, but also fulfil other vital tasks.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img src="{% static 'images/muscles/salmon.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Salmon</h2><br>
+
+            <p>Salmon is potentially a better muscle-building protein than a low-fat fish, such as tuna or cod, because it's higher in calories. These extra calories are ideal if you're active and looking to build muscle,notes dietitian<br> Karen Ansel.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/muscles/milk.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Milk</h2><br>
+
+            <p> Milk may be a smart choice for those who want to build muscle mass and put on weight. Milk is a rich source of calories and protein. Studies show that drinking it after exercise may help you build muscle mass and support healthy weight gain.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/muscles/chicken.jpg' %}">
+
+        </div>
+        <div class="content">
+                        <h2>Chicken Breast</h2><br>
+
+            <p> Chicken breast is lean and has the most protein by weight,  maintain muscle mass and improve recovery. Fattier cuts like the thigh, drumstick and wings have more calories, which make them better for people wanting to build muscle or gain weight.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+       <img src="{% static 'images/muscles/yogurt.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Greek Yogurt</h2><br>
+
+            <p>Dairy contains a mixture of fast and slow-digesting proteins, which may be beneficial for developing lean muscle.  Greek yogurt contains around twice as much protein and contains no carbohydrates.This may help muscle strength.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/muscles/tuna.jpg' %}">
+
+        </div>
+        <div class="content">
+                        <h2>Tuna</h2><br>
+
+            <p>Tuna fish is a suitable source of omega-3 fatty acids besides their benefits for general health and inflammation. Research suggests omega-3 fatty acids may also improve muscle size and strength. Tuna contains 7 g of protein<br> per ounce.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+      <img src="{% static 'images/muscles/beef.jpg' %}" >
+
+        </div>
+        <div class="content">
+                        <h2>Beef</h2><br>
+
+            <p>Protein is the building block our body uses to repair and make bone, skin, and cartilage. Sufficient protein helps us to build and maintain lean muscle mass. Out of all macronutrients, protein is the most satiating, and it discourages food cravings.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/muscles/soybean.png' %}"  >
+
+        </div>
+        <div class="content">
+                        <h2>Soybean</h2><br>
+
+            <p>Soy-based foods contain complete protein, which provides amino acids needed to help build and repair muscles. Soy can also be combined with other forms of protein very easily. Whey and casein are two examples of proteins often mixed in with soy protein.</p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/muscles/cheese.jpg' %}" >
+
+        </div>
+        <div class="content">
+                        <h2>Cheese</h2><br>
+
+            <p>It is a popular choice amongst many athletes and body builders, as the whey and casein protein keeps their muscles lean and aids in post-workout recovery (28). Bottom Line: With the protein, fat, and carbs in cheese, you can gain weight and build muscle with ease.</p>
+        </div>
+    </div>
+
+
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/muscles/beans.jpg' %}" >
+
+        </div>
+        <div class="content">
+                        <h2>Beans</h2><br>
+
+            <p>What's more, they are excellent sources of fiber and B vitamins, in addition to being high in magnesium, phosphorus and iron. For these reasons, beans are a good source of plant-based protein to add to your diet. Beans can repair the muscle.</p>
+        </div>
+    </div>
+
+
+
+         <div class="card">
+        <div class="circle">
+<img src="{% static 'images/muscles/peanuts.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Peanuts</h2><br>
+
+            <p>Gym goers need to consume protein in high doses to aid muscle growth and recovery. Peanuts are an excellent source of protein, with 25.8 grams of protein per 100 grams. Peanut butter is an easy to consume snack which fulfils a large part of most gymmers' protein.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% endblock %}

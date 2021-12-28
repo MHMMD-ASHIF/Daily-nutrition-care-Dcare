@@ -1,0 +1,285 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title >Foods For Brain</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:300px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.1);
+    opacity:1;
+    }
+
+    .container .card .circle
+    {
+    position: relative;
+    width:100%;
+    height:100%;
+    background:#000;
+    clip-path:circle(220px at center 0);
+    text-align:center;
+    }
+    .container .card .circle h2
+    {
+    color:#fff;
+    font-size:4.5em;
+    padding:30px 0;
+    }
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:60%;
+        clip-path:circle(220px at center 0);
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>FOODS FOR SKIN</h1>
+
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+          <img src="{% static 'images/skin/avocado.jpg'%}" >
+        </div>
+        <div class="content">
+            <h2>Avocado</h2><br>
+            <p>Besides tasting delicious as guacamole or spread on a warm piece of toast, avocados boast an impressive list of skin-boosting benefits. This is due to the healthy fats, vitamins, and minerals that are packed inside this nutritious super fruit.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/skin/orange.jpg'%}">
+        </div>
+        <div class="content">
+            <h2>Orange</h2><br>
+
+            <p>Antioxidants found in Oranges fight free radicals which may slow down the production of wrinkles, and stop premature aging. Oranges have a high content of citric acid which aids in skin exfoliation and helps to dry out acne, improving the overall look of your skin.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img src="{% static 'images/skin/melon.png' %}" >
+        </div>
+        <div class="content">
+                        <h2>WaterMelon</h2><br>
+
+            <p>Watermelon is full of antioxidants such as lycopene and also vitamin C and A which helps reduce these free radicals that can slow down the signs of ageing. The consumption of Vitamin A can encourage growth of collagen and elastin cells.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/skin/pineapple.jpg'%}" >
+        </div>
+        <div class="content">
+                        <h2>Pineapple</h2><br>
+
+            <p> Promoting healthy skin. Pineapple juice contains vitamin C and beta carotene. These antioxidants can help reduce wrinkles, improve overall skin texture, and pineapple minimize skin damage from sun( uv - rays ) and pollution exposure. </p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/skin/broccoli.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Broccoli</h2><br>
+
+            <p>  It have many vitamins and minerals important for skin health, including zinc, vitamin A, and vitamin C. A carotenoid that works like beta carotene. Lutein helps protect your skin from oxidative damage, which can cause your skin to become dry and wrinkled. </p>
+        </div>
+    </div>
+
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/skin/sunflower.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Sunflower seed</h2><br>
+
+            <p>Sunflower seeds just might be your go-to food for clear and glowing skin. The seeds are replete with essential fatty acids like linolenic, oleic and palmitic acid, which help in the formation of collagen and elastin, rendering smoothness to the skin tissues.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+<img src="{% static 'images/skin/fattyfish.jpg'%}">
+        </div>
+        <div class="content">
+                        <h2>Fatty Fish</h2><br>
+
+            <p>Such as salmon, mackerel, and herring, are excellent foods for healthy skin. They're rich sources of omega-3 fatty acids, which are important for maintaining skin health (1). Omega-3 fatty acids are necessary to help keep skin thick, supple, and moisturized. </p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/skin/tomato.jpg' %}" >
+
+        </div>
+        <div class="content">
+                        <h2>Tomatoes</h2><br>
+
+            <p>It will reduces the blockheads and reduces pimples on the skin and reduces the black skin cells. Increases white skin cells and are tomatoes good for acne and tomatoes good for balancing your skin.Immediate results everyday rub the tomato on the face.</p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/skin/carrots.jpeg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Carrots</h2><br>
+
+            <p> Carrot juice may likewise aid your skin. One study found that a carotenoid-rich diet may protect your skin from UV damage and improve skin appearance. Carrot juice provides vitamin C and beta carotene, two antioxidants that may protect your skin from damage.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/skin/berries.jpg'%}"  >
+
+        </div>
+        <div class="content">
+                        <h2>Berries</h2><br>
+
+            <p>Berries may help reduce skin wrinkling, as their antioxidants help control free radicals, one of the leading causes of skin damage that contributes to aging. Though research is limited, ellagic acid appears responsible for some of the skin-related benefits of berries.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+         <div class="card">
+        <div class="circle">
+<img src="{% static 'images/skin/curd.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Curd</h2><br>
+
+            <p>Curd is full of good bacteria that helps your skin glow by nourishing. Full of protein, calcium and vitamin D, curd for skin improves your complexion. Its anti-inflammatory properties aids in reducing acne. The antioxidants present in this superfood heals dry skin.</p>
+        </div>
+    </div>
+
+
+             <div class="card">
+        <div class="circle">
+       <img src="{% static 'images/skin/milk.jpg'%}">
+        </div>
+        <div class="content">
+                        <h2>Milk</h2><br>
+
+            <p>Milk contains lactic acid, which is really effective for lightening skin and removing dead skin cells that get accumulated on your face. It also helps to soothe sun burn as it contains protein that wards off the burning sensation and diminishes unwanted pigmentation. </p>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% endblock %}

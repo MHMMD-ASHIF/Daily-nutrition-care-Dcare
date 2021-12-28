@@ -1,0 +1,297 @@
+
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BMI CALCULATOR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'icons/bmi.png' %}">
+      <style>
+              body{
+          background-color: #000000e6;
+          margin: 0;
+
+          text-align: center;
+          font-family: 'Montserrat', sans-serif;
+          color: #fff;
+
+        }
+
+        h1, h2, h3, h4, h5, h6, p, a, li{
+          margin: 0;
+          padding: 0;
+          text-decoration: none;
+          list-style: none;
+        }
+
+        .cal-header{
+          margin: 0 0 2rem 0;
+        }
+
+        #gender-picker{
+          padding-left: 0;
+          margin: 25px 0;
+        }
+
+        #gender-picker li{
+          display: inline-block;
+        }
+
+        #bmi-calculator{
+          border-radius: 40px;
+          background-repeat: no-repeat;
+          padding: 20px;
+          width: 450px;
+          margin: 0 auto;
+        }
+
+        .ideal, .result{
+          display: inline-block;
+        }
+
+        .bmi-info{
+          margin: 0 auto;
+        }
+
+        .cal-header h1{
+          margin: 1rem 0;
+          font-size: 1.5rem;
+        }
+
+        .female-clicked{
+          background-color: #003333;
+          -moz-box-shadow:    inset 0 0 3px #000000;
+          -webkit-box-shadow: inset 0 0 3px #000000;
+          box-shadow:         inset 0 0 3px #000000;
+        }
+
+        .male-clicked{
+          background-color: #FF3300;
+          -moz-box-shadow:    inset 0 0 3px #000000;
+          -webkit-box-shadow: inset 0 0 3px #000000;
+          box-shadow:         inset 0 0 3px #000000;
+        }
+
+        .female a{
+          margin: 1rem 10px;
+          padding: 10px 25px;
+          background-color: #336666;
+          border-radius: 5px;
+          width: 125px;
+          height: 35px;
+          text-decoration: none;
+          color: white;
+          transition: color 2s;
+        }
+
+        .female a:hover{
+          background-color: #339999;
+        }
+
+        .male a{
+          margin: 1rem 10px;
+          padding: 10px 30px;
+          background-color: #FF9966;
+          border-radius: 5px;
+          width: 125px;
+          height: 35px;
+          text-decoration: none;
+          color: white;
+          transition: color 2s;
+        }
+
+        .male a:hover{
+          background-color: #FF9933;
+        }
+
+        #weight, #height, #age{
+          display:inline-block;
+          width:  270px;
+          padding: 3% 3%;
+          margin: 25px 0;
+        }
+        #m1{
+        float:center;
+        }
+
+        input[type=text] {
+          border: none;
+          background-color: transparent;
+          border-bottom: 1px solid #99CCCC;
+        }
+
+        #cal-btn{
+          color: white;
+          margin: 1rem 0;
+          background-color: #66CCFF;
+          padding: 2% 4%;
+          font-size: 1.2rem;
+          border: none;
+          border-radius: 5px;
+          margin: 25px 0;
+        }
+
+        #cal-btn:hover{
+          background-color: #00CCCC;
+        }
+
+        .ideal{
+          margin: 20px 10px;
+          background-color: #336666;
+          border-radius: 5px;
+          padding: 2% 3%;
+
+        }
+
+        .result-text{
+          font-size: 50px;
+          font-weight: 700;
+        }
+
+        #result-text{
+          font-size: 50px;
+          font-weight: 700;
+        }
+
+        .result{
+          margin: 20px 10px;
+          background-color: #FF9966;
+          border-radius: 5px;
+          padding: 2% 3%;
+        }
+
+
+        .cal-footer{
+          margin: 2rem 0 0 0;
+          font-size: 0.8rem;
+        }
+        .box{
+          float:center;
+          background-color: lightgrey;
+          width: 70vw;
+          margin-top:50px;
+          margin-left:250px;
+          margin-bottom:100px;
+        color:black;
+          padding: 30px;
+
+
+        }
+        .box h3{
+         font-weight: bold;
+        font-size:35px;}
+        .img1
+        {
+    margin-left:30px;
+        width:80vw;
+        height:50vw;}
+        footer{
+        margin-bottom:20px;}
+
+          </style>
+  </head>
+
+
+  <body>
+
+
+<div id="bmi-calculator">
+      <div class="calculator">
+        <div class="cal-header">
+          <h1 style="font-weight: bold;">BMI CALCULATOR</h1>
+        </div>
+
+        <div class="gender-pick">
+          <ul id="gender-picker">
+            <li class="female"><a href="#" class="female" onClick="femaleClicked();">FEMALE</a></li>
+            <li class="male"><a href="#" class="male" onClick="maleClicked();">MALE</a></li>
+          </ul>
+        </div>
+
+        <div class="bmi-info">
+          <form name="bmiForm">
+          <input style="color:white;" id="weight" type="text" name="weight" placeholder="Weight KG"><br>
+          <input style="color:white;"  id="height" type="text" name="height" placeholder="Height CM"><br>
+          <input style="color:white;"  id="age" type="text" name="age" placeholder="Age"><br>
+
+          <input  id="cal-btn" type="button" value="CALCULATE BMI" onClick="calculateBmi()">
+          </form>
+        </div>
+
+        <div class="ideal">
+          <p>IDEAL BMI</p>
+          <p class="result-text">24.9</p>
+          <p id="ideal-bmi">IDEAL BMI</p>
+        </div>
+
+        <div class="result">
+          <p>YOUR BMI</p>
+          <p id="result-text">BMI</p>
+          <p id="meaning">BMI</p>
+        </div>
+
+
+</div>
+
+    </div>
+  </body>
+  <script>
+                  function femaleClicked() {
+          var element = document.getElementByClassName("female");
+          element.classList.add("female-clicked");
+          element.classList.removeClass("female");
+        }
+
+        function maleClicked() {
+          var element = document.getElementByClassName("male");
+          element.classList.add("male-clicked");
+          element.classList.removeClass("male");
+        }
+
+        function calculateBmi() {
+        var weight = document.bmiForm.weight.value
+        var height = document.bmiForm.height.value
+
+        if(weight > 0 && height > 0){
+        var finalBmi = weight/(height/100*height/100)
+
+        finalBmi = Math.floor(finalBmi);
+
+
+        document.getElementById('result-text').innerHTML = finalBmi
+
+        if (finalBmi < 18.5){
+        document.getElementById('meaning').innerHTML = "You are underweight."
+
+        } else if(finalBmi > 18.5 && finalBmi < 25){
+        document.getElementById('meaning').innerHTML = "You are healthy."
+
+        } else if(finalBmi > 25){
+        document.getElementById('meaning').innerHTML = "You are overweight."
+        }
+
+        } else{
+        document.getElementById('meaning').innerHTML = "Please Fill in everything correctly"
+        }
+
+        }
+  </script>
+  <div >
+
+
+<img class="img1" style="border-radius:20px;" src="{% static 'images/bmi/bmi.jpg'%}" alt="Italian Trulli"  >
+</div>
+  <div  class="box"  style="border-radius:20px;"><h3>BMI</h3><br>Body Mass Index (BMI) is a person's weight in kilograms divided by the square of height in meters. A high BMI can be an indicator of high body fatness. BMI can be used to screen for weight categories that may lead to health problems but it is not diagnostic of the body fatness or health of an individual.</div>
+
+
+  </html>
+
+
+<footer><p class="text-center">Copyright @2021 | Designed With by <a href="#">D-CARE</a></p></footer>
+
+
+
+
+{% endblock %}

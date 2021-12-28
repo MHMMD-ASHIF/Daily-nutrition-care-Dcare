@@ -1,0 +1,74 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+  float:center
+
+
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 30%;
+  background: #f1f1f1;
+    position: absolute;
+                top: 105px;
+                left: 430px;
+
+
+
+}
+
+form.example button {
+  float: left;
+  width: 7%;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+   position: absolute;
+                top: 105px;
+                left: 890px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<br>
+
+<form class="example"  method="POST" action="{% url 'search' %}">
+  {% csrf_token %}
+  <input type="text" placeholder="Search..." name="searched">
+
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+
+
+
+</body>
+</html>
+
+
+
+
+{% endblock %}

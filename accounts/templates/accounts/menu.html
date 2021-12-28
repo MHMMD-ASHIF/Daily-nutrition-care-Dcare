@@ -1,0 +1,598 @@
+{% extends 'accounts/main.html' %}
+
+
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <link rel="icon" href="{% static 'icons/menu.png' %}">
+    <meta charset="UTF-8">
+    <meta nam="viewport" content="width=device-width, initial-scale=1">
+    <title>FOOD MENU</title>
+    <style>
+ body {
+ margin : 0;
+ padding: 0;
+ font-family:poppins;
+ }
+ .fix{
+ clear: both;
+ overflow: hidden;
+ }
+ header{
+  overflow: hidden;
+  height: 100vh;}
+
+  .vid-bg{
+
+width:100%;
+
+}
+.nav-area{
+background: rgba(0,0,0,0.7);
+height: 10vh;
+position: absolute;
+width:100%;
+}
+.logo{
+margin: 0 50px;
+height: 60px;
+float: left;
+color: #fff;
+font-size: 35px;
+text-transform: capitalize;
+font-weight: bold;
+letter-spacing: 2px;
+}
+.logo span{
+color:#f5bb00;
+}
+.menu-area{
+float: right;
+list-style: none;
+margin: 20px;
+}
+.menu-area li{
+display: inline-block;
+margin: 0 5px;
+}
+.menu-area li a{
+text-decoration: none;
+color: #fff;
+padding: 5px 10px;
+letter-spacing: 2px;
+}
+.menu-area li.active a{
+color: #f5bb00;
+}
+.menu-area li.active a:hover{
+color:#f5bb00;
+}
+.banner-text{
+position: absolute;
+top: 45%;
+text-align: center;
+left:30%;
+}
+.banner-text h2{
+color: #fff;
+font-size:6vw;
+margin: 0;
+}
+.banner-text h2 span{
+color: #f5bb00;
+}
+
+
+.banner-text p{
+color:#fff;
+font-size: 14px;
+margin: 0;
+font-weight:bold;
+}
+
+
+
+
+
+
+
+.banner-text button{
+  padding-top: 60px;
+  display: inner-block;
+margin-top: 5%;
+background:transparent;
+border: 0;
+font-size: 20px;
+text-transform: uppercase;
+border:3px solid #fff;
+padding: 10px 25px;
+color:#fff;
+border-radius: 25px;
+
+}
+
+#section08 a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="fix">
+        <video src="{% static 'videos/video1.mp4' %}" class="vid-bg"   autoplay loop muted></video>
+
+
+        <div class="banner-text">
+            <h2> Daily Food<span>Menu</span></h2>
+
+            <a href="#section08"><span></span><span></span><span></span><button>Explore</button></a>
+</section>
+<section id="section08" class="demo">
+
+        </section></div>
+    </header>
+</body>
+
+</html>
+<style>
+
+
+.flip-card {
+margin-top:7%;
+  background-color: transparent;
+  width: 400px;
+  height: 300px;
+    padding: 0 10px;
+        float: left;
+        margin-left:5%;
+         margin-bottom: 100px;
+  perspective: 1000px;
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius:25px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #BBB;
+  color: black;
+border-radius:25px;
+
+}
+
+.flip-card-front img
+{
+border-radius:25px;
+}
+
+.flip-card-back {
+  background-color: #F8B195;
+  color: white;
+  border-radius:25px;
+  transform: rotateY(180deg);
+}
+
+
+
+.btn2 button{
+
+
+  position: relative;
+top:40%;
+
+
+  color:black;
+
+  background-color: #F6F7D7;
+
+
+  width: 40%;
+  font-size: 18px;
+
+  display: inner-block;
+
+background:transparent;
+
+font-size: 20px;
+
+border:3px solid #fff;
+padding: 5px 5px;
+color:#fff;
+border-radius: 25px;
+
+
+}
+
+
+
+
+
+	h1 {
+	text-align: center;
+
+	color:#757575;
+	margin-bottom:20px;}
+	h3{
+color:#4B4B4B;}
+	h4{
+color:#4B4B4B;}
+
+	#head{
+	text-align:center;
+	}
+	.flip-card h1 {
+	color:white;
+}
+.flip-card-front img{
+width:380px;
+height:300px;}
+
+</style>
+
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="{% static 'images/menu/weight_reduce.jpg' %}" alt="Avatar">
+    </div>
+    <div class="flip-card-back">
+      <h1>Weight Reduce diet</h1>
+      <p>Foods for reduce weight</p>
+     <a class="btn2" href="{% url 'weight_reduce' %}"><button>Open</button></a></div>
+  </div>
+</div>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="{% static 'images/menu/Normal.jpg' %}" alt="Avatar" >
+    </div>
+    <div class="flip-card-back">
+      <h1>Balanced Diet</h1>
+      <p>Foods for Normal Diet</p>
+     <a class="btn2" href="{% url 'normal_diet' %}"><button>Open</button></a></div>
+  </div>
+</div>
+
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="{% static 'images/menu/weight.png' %}" alt="Avatar"">
+    </div>
+    <div class="flip-card-back">
+      <h1>Weight gain diet</h1>
+      <p>Foods for Weight gain </p>
+     <a class="btn2" href="{% url 'weight_gain' %}"><button>Open</button></a></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<html>
+<head>
+<title>Table</title>
+<meta name="viewport" content =" width=device-width, initial-scale=1">
+    <style>
+body{
+margin:0;
+padding:20px;
+font-family:san-serif;
+}
+*{
+box-sizing:border-box;
+}
+.table{
+width:100%;
+border-collapse: collapse;
+margin-bottom:5%;
+}
+.table td, .table th{
+padding:12px 15px;
+border:1px solid #ddd;
+text-align:center;
+}
+.table th
+{
+background-color: #444444;
+color:#fff;
+}
+.table tbody tr:nth-child(even){
+background-color: #f5f5f5;
+}
+@media (max-width: 500px){
+.table thread{
+display:none;
+}
+.table, .table tbody, .table tr,.table td{
+display: block;
+width:100%;
+}
+.table tr{
+margin-bottom:15px;}
+
+
+.table td{
+
+text-align:center;
+padding-Left:50%;
+text-align:right;
+position:relative;}
+
+ .table td::before{
+ content: attr(data-label);
+ position: absolute;
+ left:0;
+ width:50%;
+ padding-Left:15px;
+ font-size:15px;
+ font-weight: bold;
+ }
+ #5{
+text-align: right;}
+
+    </style>
+</head>
+
+<table class="table">
+    <thread>
+        <th>S.No</th>
+        <th>Nutrition</th>
+        <th>Recommended intake </th>
+        <th>Over dosage</th>
+
+
+    </thread>
+    <tbody>
+    <tr>
+        <td data-label="S.No">1</td>
+          <td data-label="Nutrition">Protein</td>
+          <td data-label="Recommended intake">56 gm</td>
+          <td data-label="Over dosage">100 gm</td>
+    </tr>
+
+
+    <tr>
+        <td data-label="S.No">2</td>
+          <td data-label="Nutrition">Carbs</td>
+          <td data-label="Recommended intake">225-325 gm</td>
+          <td data-label="Over dosage">1000 gm</td>
+    </tr>
+
+
+
+    <tr>
+        <td data-label="S.No">3</td>
+          <td data-label="Nutrition">Fat</td>
+          <td data-label="Recommended intake">44-77 gm</td>
+          <td data-label="Over dosage">100 gm</td>
+    </tr>
+
+
+
+    <tr>
+        <td data-label="S.No">4</td>
+          <td data-label="Nutrition">calories</td>
+          <td data-label="Recommended intake">2000-2500 gm</td>
+          <td data-label="Over dosage">No information found</td>
+    </tr>
+
+ </tbody>
+</table>
+
+
+      <h2 >Minerals</h2>
+<table class="table">
+ <tbody>
+
+   <thread>
+        <th>S.No</th>
+        <th>Nutrition</th>
+        <th>Recommended intake </th>
+        <th>Over dosage</th>
+
+
+    </thread>
+
+
+
+
+   <tr>
+        <td data-label="S.No">1</td>
+          <td data-label="Nutrition">Boron</td>
+          <td data-label="Recommended intake">< 20 mg</td>
+          <td data-label="Over dosage">No information found</td>
+    </tr>
+
+   <tr>
+        <td data-label="S.No">2</td>
+          <td data-label="Nutrition">Calcium</td>
+          <td data-label="Recommended intake">1000 mg</td>
+          <td data-label="Over dosage">1500 mg</td>
+    </tr>
+
+   <tr>
+        <td data-label="S.No">3</td>
+          <td data-label="Nutrition">Copper</td>
+          <td data-label="Recommended intake">2 mg</td>
+          <td data-label="Over dosage">10 mg</td>
+    </tr>
+
+
+    <tr>
+        <td data-label="S.No">4</td>
+          <td data-label="Nutrition">Iron</td>
+          <td data-label="Recommended intake">15 mg</td>
+          <td data-label="Over dosage">20 mg</td>
+    </tr>
+
+    <tr>
+        <td data-label="S.No">5</td>
+          <td data-label="Nutrition">Potassium</td>
+          <td data-label="Recommended intake">1000 mg</td>
+          <td data-label="Over dosage">2000 mg</td>
+    </tr>
+
+
+    <tr>
+        <td data-label="S.No">6</td>
+          <td data-label="Nutrition">Sodium</td>
+          <td data-label="Recommended intake">35 mg</td>
+          <td data-label="Over dosage">No information found</td>
+    </tr>
+
+    <tr>
+        <td data-label="S.No">7</td>
+          <td data-label="Nutrition">Zinc</td>
+          <td data-label="Recommended intake">15 mg</td>
+          <td data-label="Over dosage">25 mg</td>
+    </tr>
+
+
+ </tbody>
+</table>
+
+
+
+      <h2 >Vitamins</h2>
+<table class="table">
+ <tbody>
+
+   <thread>
+        <th>S.No</th>
+        <th>Nutrition</th>
+        <th>Recommended intake </th>
+        <th>Over dosage</th>
+
+
+    </thread>
+
+  <tr>
+        <td data-label="S.No">1</td>
+          <td data-label="Nutrition">Biotin</td>
+          <td data-label="Recommended intake">15 µg</td>
+          <td data-label="Over dosage">NO information found</td>
+    </tr>
+
+  <tr>
+        <td data-label="S.No">2</td>
+          <td data-label="Nutrition">Folate</td>
+          <td data-label="Recommended intake">400 µg</td>
+          <td data-label="Over dosage">>400 µg </td>
+    </tr>
+ <tr>
+        <td data-label="S.No">3</td>
+          <td data-label="Nutrition">Vitamin A</td>
+          <td data-label="Recommended intake">600 µg</td>
+          <td data-label="Over dosage">>9000 mg</td>
+    </tr>
+  <tr>
+        <td data-label="S.No">4</td>
+          <td data-label="Nutrition">Vitamin B1</td>
+          <td data-label="Recommended intake">1-4 mg</td>
+          <td data-label="Over dosage">No toxic effect</td>
+    </tr>
+  <tr>
+        <td data-label="S.No">5</td>
+          <td data-label="Nutrition">Vitamin B2</td>
+          <td data-label="Recommended intake">1,4 mg</td>
+          <td data-label="Over dosage">200 mg</td>
+    </tr>
+  <tr>
+        <td data-label="S.No">6</td>
+          <td data-label="Nutrition">Vitamin B3</td>
+          <td data-label="Recommended intake">18 mg</td>
+          <td data-label="Over dosage">150 mg</td>
+    </tr>
+  <tr>
+        <td data-label="S.No">7</td>
+          <td data-label="Nutrition">Vitamin B5</td>
+          <td data-label="Recommended intake">6 mg</td>
+          <td data-label="Over dosage">1200 mg</td>
+    </tr>
+   <tr>
+        <td data-label="S.No">8</td>
+          <td data-label="Nutrition">Vitamin B6</td>
+          <td data-label="Recommended intake">2 mg</td>
+          <td data-label="Over dosage">100 mg</td>
+    </tr>
+  <tr>
+        <td data-label="S.No">9</td>
+          <td data-label="Nutrition">Vitamin B12</td>
+          <td data-label="Recommended intake">6 µg</td>
+          <td data-label="Over dosage">3000 µg</td>
+    </tr>
+
+    <tr>
+        <td data-label="S.No">10</td>
+          <td data-label="Nutrition">Vitamin C</td>
+          <td data-label="Recommended intake">75 mg</td>
+          <td data-label="Over dosage">No impact of overdose</td>
+    </tr>
+
+
+
+
+
+    <tr>
+        <td data-label="S.No">11</td>
+          <td data-label="Nutrition">Vitamin D</td>
+          <td data-label="Recommended intake">5 µg</td>
+          <td data-label="Over dosage">>50 µg</td>
+    </tr>
+
+  <tr>
+        <td data-label="S.No">12</td>
+          <td data-label="Nutrition">Vitamin E</td>
+          <td data-label="Recommended intake">10 mg</td>
+          <td data-label="Over dosage">1000 mg</td>
+    </tr>
+
+  <tr>
+        <td data-label="S.No">13</td>
+          <td data-label="Nutrition">Vitamin K</td>
+          <td data-label="Recommended intake">80 µg</td>
+          <td data-label="Over dosage">>100 µg</td>
+    </tr>
+
+ </tbody></table>
+</html>
+
+
+{% endblock %}

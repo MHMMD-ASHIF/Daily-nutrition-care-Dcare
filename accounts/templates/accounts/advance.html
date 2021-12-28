@@ -1,0 +1,279 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<html>
+<head>
+    <title >Advanced</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:400px;
+    height:530px;
+    background:#fff;
+    margin: 10px;
+    border-radius:15px;
+   
+ 
+
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.03);
+    opacity:1;
+    }
+    .container .card h2{
+
+        color: grey;
+        font-size: 150%;
+        font-weight: 600;
+    }
+
+
+
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:320px;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+.orgin {
+    color:#444444;
+        justify-content: center;
+        background-color:#fff;
+        border-radius: 15px;
+        max-width:82%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+    .orgin:hover{
+        transform: scale(1.009);
+        
+    }
+.orgin h2
+{
+    color:gray;
+text-align:center;
+text-transform: uppercase;
+margin-top:2%;
+margin-bottom:2%;
+
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="orgin">
+    <h1>Advanced  Workouts</h1>
+
+<p style="text-align:center;">
+When the intermediate routine becomes a breeze, take a stab at these advanced moves.</p>
+
+</div>
+
+    <br>
+<div class="container">
+
+
+ <div class="card">
+        <div class="circle">
+    <img   src="{% static 'images/workout/advance/one_leg.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/advance/onelegpushup.gif'%}'" onmouseout="this.src='{% static 'images/workout/advance/one_leg.jpg'%}'">
+        </div>
+        <div class="content">
+            <h2> ONE LEGGED PUSHUP</h2><br>
+
+            <p>Lifting one leg will again put more weight into your other three limbs, thus creating more of a challenge.
+
+To get it done, assume a pushup position and lift one leg off the ground, then complete the pushup.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img   src="{% static 'images/workout/advance/jumping.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/advance/jumping.gif'%}'" onmouseout="this.src='{% static 'images/workout/advance/jumping.jpg'%}'">
+        </div>
+        <div class="content">
+                        <h2> JUMPING LUNGES</h2><br>
+
+            <p>Jumping exercises — often known as plyometrics — require you to give it your max effort for a short interval of time.
+
+Because of the power and strength they require, you’ll feel the burn quickly.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img   src="{% static 'images/workout/advance/elevated_pushup.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/advance/elevated.gif'%}'" onmouseout="this.src='{% static 'images/workout/advance/elevated_pushup.jpg'%}'">
+        </div>
+        <div class="content">
+                        <h2>ELEVATED PUSHUP</h2><br>
+
+            <p>Pike pushup will make this version the hardest.
+
+Put your feet on an elevated surface, like a bench or a step, and complete an elevated pike pushup.
+
+The higher the surface, the more challenging it will be.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img   src="{% static 'images/workout/advance/getupsquat.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/advance/getup_squat.gif'%}'" onmouseout="this.src='{% static 'images/workout/advance/getupsquat.jpg'%}'">
+
+        </div>
+        <div class="content">
+                        <h2>SQUAT WITH JUMP</h2><br>
+
+            <p>Jump squats increase your explosive power, improve upper and lower body strength, and burn calories faster than regular squats. Explosive power gives you the ability to take off faster and move quicker.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+          <div class="card">
+        <div class="circle">
+<img   src="{% static 'images/workout/advance/bridge_withleg.jpg'%}" height="300" onmouseover="this.src='{% static 'images/workout/advance/bridgewithleg.gif'%}'" onmouseout="this.src='{% static 'images/workout/advance/bridge_withleg.jpg'%}'">
+        </div>
+        <div class="content">
+            <h2> LEG EXTENDED</h2><br>
+            <p>Lifting the foot then extending the leg straight out will make a single-leg bridge even more difficult.
+
+Keep your foot flexed throughout the movement. Complete the same number of reps on both legs.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img   src="{% static 'images/workout/advance/one_arm_plank.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/advance/onearmplank.gif'%}'" onmouseout="this.src='{% static 'images/workout/advance/one_arm_plank.jpg'%}'">
+
+        </div>
+        <div class="content">
+                        <h2>ONE ARM PLANK </h2><br>
+
+            <p>Beyond building a stronger back with exercises like Rows, Pull-Ups and Deadlifts, Stevens recommends performing the Single-Arm Plank to improve shoulder blade stability and help protect your shoulders.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+<img   src="{% static 'images/workout/advance/mountaincardio.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/advance/cardio.gif'%}'" onmouseout="this.src='{% static 'images/workout/advance/mountaincardio.jpg'%}'">
+        </div>
+        <div class="content">
+                        <h2>MOUNTAIN CLIMBING</h2><br>
+
+            <p>The Mountain Climber is a bodyweight exercise that serve as a great full-body workout. This plyometric plank movement does it all: increases core strength, defines the shoulders, chest and upper back.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img   src="{% static 'images/workout/advance/abs_lower.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/advance/abs_lower.gif'%}'" onmouseout="this.src='{% static 'images/workout/advance/abs_lower.jpg'%}'">
+
+        </div>
+        <div class="content">
+                        <h2>LOWER ABS</h2><br>
+
+            <p>It is important to maintain strength in all these muscles. Strong abdominal muscles can help improve posture and balance. They can also help reduce back pain and increase flexibility (1, 2 , 3 , 4 ).</p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+<img   src="{% static 'images/workout/advance/point_plank.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/advance/pointtopointplank.gif'%}'" onmouseout="this.src='{% static 'images/workout/advance/point_plank.jpg'%}'">
+        </div>
+        <div class="content">
+                        <h2>POINT TO POINT PLANK</h2><br>
+
+            <p>This exercise strengthens the hip and oblique muscles and reduces the risk of lower back and shoulder stress. Start in a push-up position with your feet <br> shoulder-width apart.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,567 @@
+{% extends 'accounts/main.html' %}
+
+{% load static %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+    <title> Weight Reduce</title>
+    <style>
+
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+    body{
+
+
+
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    background:linear-gradient(45deg, #effaf00,#bb02ff);
+    background-attachment: fixed;
+    }
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:270px;
+    height:450px;
+    background:#fff;
+    margin: 10px;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.1);
+    opacity:1;
+    }
+
+    .container .card .circle
+    {
+    position: relative;
+    width:100%;
+    height:100%;
+    background:#000;
+    clip-path:circle(220px at center 0);
+    text-align:center;
+    }
+    .container .card .circle h2
+    {
+    color:#fff;
+    font-size:4.5em;
+    padding:30px 0;
+    }
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:60%;
+        clip-path:circle(220px at center 0);
+
+
+        }
+
+
+
+
+
+
+
+.container .card .content_one h2
+{
+  position:absolute;
+    bottom:10px;
+    padding:5px;
+    margin-bottom:60%;
+
+    color:gray;
+
+
+}
+
+.card .card-stats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: rgb(255, 7, 110);
+}
+
+.card .card-stats .stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  font-style:italic;
+  color: #fff;
+  padding:10px;
+}
+.card .card-stats .stat .mini_head
+{
+font-weight:bold;
+    font-style:italic;
+    margin-bottom:10px;
+    font-size:18px;
+}
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+<h1>Foods for Weight Gain</h1>
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/milk.jpg'%}" >
+        </div>
+          <div class="content_one" style="item-align:right">
+         <h2> Milk</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Carbs</div>
+      <div class="value">5 gm</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Protein</div>
+      <div class="value">3.5 gm</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Calorie</div>
+      <div class="value">42</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+       <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/rice.jpg'%}" >
+        </div>
+          <div class="content_one">
+         <h2> Rice</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Carbs</div>
+      <div class="value">28 gm</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Protein</div>
+      <div class="value">2.7 gm</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Calorie</div>
+      <div class="value">130</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+
+
+
+       <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/nuts.jpg'%}" >
+        </div>
+          <div class="content_one">
+         <h2> Nuts</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Carbs</div>
+      <div class="value">21 gm</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Protein</div>
+      <div class="value">20 gm</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Calorie</div>
+      <div class="value">607</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+
+       <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/red_meat.jpg'%}" >
+        </div>
+          <div class="content_one">
+         <h2> Red Meats</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Carbs</div>
+      <div class="value">44 gm</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Protein</div>
+      <div class="value">25 gm</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Fat</div>
+      <div class="value">12 gm</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+       <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/potatoes.jpg'%}" >
+        </div>
+          <div class="content_one">
+         <h2> Potatoes</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Carbs</div>
+      <div class="value">17 gm</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Starch</div>
+      <div class="value">60-80%</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Calorie</div>
+      <div class="value">77</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+
+
+       <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/fattyfish.jpg'%}" >
+        </div>
+          <div class="content_one">
+         <h2> Fatty Fish</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Potassium</div>
+      <div class="value">363 mg</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Protein</div>
+      <div class="value">20 gm</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Calorie</div>
+      <div class="value">208</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+
+
+       <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/banana.jpg'%}" >
+        </div>
+          <div class="content_one">
+         <h2> Banana</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Carbs</div>
+      <div class="value">23 gm</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Protein</div>
+      <div class="value">1.1 gm</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Calorie</div>
+      <div class="value">89</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+
+       <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/grains.jpg'%}" >
+        </div>
+          <div class="content_one">
+         <h2> Grains</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Carbs</div>
+      <div class="value">87 gm</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Protein</div>
+      <div class="value">6 gm</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Calorie</div>
+      <div class="value">378</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+
+
+       <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/avocado.jpg'%}" >
+        </div>
+          <div class="content_one">
+         <h2> Avocados</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Carbs</div>
+      <div class="value">9 gm</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Protein</div>
+      <div class="value">2 gm</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Calorie</div>
+      <div class="value">160</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+
+       <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/cheese.jpg'%}" >
+        </div>
+          <div class="content_one">
+         <h2> Cheese</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Carbs</div>
+      <div class="value">1.3 gm</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Protein</div>
+      <div class="value">25 gm</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Calorie</div>
+      <div class="value">402</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+       <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/eggs.jpg'%}" >
+        </div>
+          <div class="content_one">
+         <h2> Eggs</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Carbs</div>
+      <div class="value">1.1 gm</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Protein</div>
+      <div class="value">13 gm</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Calorie</div>
+      <div class="value">155</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+
+       <div class="card">
+        <div class="circle">
+            <img src="{% static 'images/weight_gain/chocolate.jpg'%}" >
+        </div>
+          <div class="content_one">
+         <h2> Chocolate</h2></div>
+        <div class="content">
+
+
+
+  <div class="card-stats">
+    <div class="stat">
+      <div class="mini_head">Carbs</div>
+      <div class="value">10 gm</div>
+    </div>
+    <div class="stat border">
+      <div class="mini_head">Protein</div>
+      <div class="value">2 gm</div>
+    </div>
+    <div class="stat">
+      <div class="mini_head">Calorie</div>
+      <div class="value">170</div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+{% endblock %}

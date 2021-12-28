@@ -1,0 +1,276 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title >Foods For Brain</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:300px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.1);
+    opacity:1;
+    }
+
+    .container .card .circle
+    {
+    position: relative;
+    width:100%;
+    height:100%;
+    background:#000;
+    clip-path:circle(220px at center 0);
+    text-align:center;
+    }
+    .container .card .circle h2
+    {
+    color:#fff;
+    font-size:4.5em;
+    padding:30px 0;
+    }
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:60%;
+        clip-path:circle(220px at center 0);
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>FOODS FOR BONE</h1>
+
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+          <img src="{% static 'images/bones/milk.jpg'%}" >
+        </div>
+        <div class="content">
+            <h2>Fatty Fish</h2><br>
+            <p>The idea does make some sense. Milk contains calcium. Calcium is known to improve bone mineral density. But demonstrating a definitive link between the consumption of milk and the possession of strong bones is harder than it sounds.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/bones/cheese.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Cheese</h2><br>
+
+            <p>Cheese is a good source of calcium, a key nutrient for healthy bones and teeth, blood clotting, wound healing, and maintaining normal blood pressure. Men and women aged from 19 to 50 years should consume 1,000 mg of calcium a day.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img src="{% static 'images/bones/eggs.jpg' %}">
+        </div>
+        <div class="content">
+                        <h2>Eggs</h2><br>
+
+            <p> The presence of vitamin D in eggs help the bones stay strong. Vitamin D is essential for calcium absorption and maintains optimum bone health. Eggs therefore play an important role in preventing osteoporosis. The protein content of eggs is legendary.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/bones/yogurt.jpg'%}">
+        </div>
+        <div class="content">
+                        <h2>Yogurt</h2><br>
+
+            <p>Yogurt contains important nutrients that help maintain a healthy bone density. Apart from that, it also has proteins, calcium, phosphorus, potassium and Vitamin D. These key components strengthen the bones and reduces the risk of osteoporosis.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/bones/tofu.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Tofu</h2><br>
+
+            <p>Tofu, otherwise also known as bone-friendly food is rich in potassium, calcium and proteins which are key in keeping your bones healthy. Apart from these, tofu has 67 more vital nutrients, hence making it a nutrient-dense food. Tofu helps reduce bone loss.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+       <img src="{% static 'images/bones/spinach.jpg'%}">
+        </div>
+        <div class="content">
+                        <h2>Spinach</h2><br>
+
+            <p>Spinach is a great alternative for those who don’t consume dairy products on a regular basis. One cup of cooked spinach has almost 25% of your daily calcium intake. Calcium makes sure that your bones stay strong longer and is a prime element in bone building.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/bones/orange.jpg' %}" >
+
+        </div>
+        <div class="content">
+                        <h2>Orange</h2><br>
+
+            <p>Oranges are rich in vitamin C which helps in forming collagen. Collagen contributes to healthy bone structure. It is also rich in Vitamin A which is essential for overall skeletal growth and cell differentiation. Having fresh orange juice or fruit is a good start to your day!</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+      <img src="{% static 'images/bones/nuts.jpg' %}" >
+
+        </div>
+        <div class="content">
+                        <h2>Nuts</h2><br>
+
+            <p>Good source of protein and magnesium, which both ensure strong bone mass, can be found in nuts, Curley says.  Spain also found that eating nuts, along with a high intake of calcium, is associated with protection against bone demineralization.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/bones/soybean.png' %}"  >
+
+        </div>
+        <div class="content">
+                        <h2>Soybean</h2><br>
+
+            <p>Soybean food intake has been associated with higher bone mineral density (BMD) in Chinese postmenopausal but not premenopausal women [Mei et al. 2001], and positively with  bone mineral density in early postmenopausal women. </p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/bones/almond.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Almond</h2><br>
+
+            <p>Two tablespoons almond powder 111 milligrams of calcium. Plus, almonds contain potassium <br>    ( 240 milligrams in 2 tablespoons ) as well as protein and other nutrients that play a supportive role in building strong bones.</p>
+        </div>
+    </div>
+
+
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/heart/berries.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Berries</h2><br>
+
+            <p>Berries are a good source of polyphenols, especially anthocyanins,  and fiber. In epidemiological and clinical studies, these constituents have been associated with improved cardiovascular risk profiles.It reduces risk of heart diseases.</p>
+        </div>
+    </div>
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/heart/edamame.jpg'%}"  >
+
+        </div>
+        <div class="content">
+                        <h2>Edamame</h2><br>
+
+            <p>In addition to being a decent source of soy protein, edamame is rich in healthy fiber, antioxidants and vitamin K. These plant compounds may reduce the risk of heart disease and improve the blood lipid profile, a measure of fats including cholesterol.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% endblock %}

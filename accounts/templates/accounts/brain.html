@@ -1,0 +1,276 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title >Foods For Brain</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:300px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.1);
+    opacity:1;
+    }
+
+    .container .card .circle
+    {
+    position: relative;
+    width:100%;
+    height:100%;
+    background:#000;
+    clip-path:circle(220px at center 0);
+    text-align:center;
+    }
+    .container .card .circle h2
+    {
+    color:#fff;
+    font-size:4.5em;
+    padding:30px 0;
+    }
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:60%;
+        clip-path:circle(220px at center 0);
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+
+
+
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <h1 >FOODS FOR BRAIN</h1>
+
+
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+          <img src="{% static 'images/nutrition/fattyfish.jpg'%}" >
+        </div>
+        <div class="content">
+            <h2>Fatty Fish</h2><br>
+            <p>Overall, fatty fish is an excellent choice for brain health. Summary: Fatty fish is a rich source of omega-3s, a major building block of the brain. Omega-3s play a role in sharpening memory and improving mood, as well as protecting your brain against decline.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/nutrition/coffee.jpg'%}"  >
+
+        </div>
+        <div class="content">
+                        <h2>Coffee</h2><br>
+
+            <p>Caffeine promotes central nervous system stimulation, making you feel alert. Bottom Line: Caffeine is the key reason why coffee boosts brain function. This stimulant blocks adenosine, an inhibitory neurotransmitter in the brain that makes you sleepy.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img src="{% static 'images/nutrition/blueberries.png' %}" >
+        </div>
+        <div class="content">
+                        <h2>Blueberries</h2><br>
+
+            <p> Blueberries Can Help Maintain Brain Function and Improve Memory. Oxidative stress can accelerate your brain's aging process, negatively affecting brain function. The antioxidants in blueberries may affect areas of your brain that are essential for intelligence. </p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/nutrition/turmeric.jpg'%}" >
+        </div>
+        <div class="content">
+                        <h2>Turmeric</h2><br>
+
+            <p> Interestingly, curcumin can increase brain levels of BDNF. By doing this, it may be effective in delaying or even reversing many brain diseases and age-related decreases in brain function. It may also improve memory and make you smarter.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/nutrition/broccoli.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Broccoli</h2><br>
+
+            <p> As well as being a low-calorie source of dietary fiber, <br>broccoli may be good for the brain. Broccoli is rich in compounds called glucosinolates. When the body breaks these down, they produce isothiocyanates. </p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+       <img src="{% static 'images/nutrition/pumkinseed.jpg'%}" >
+        </div>
+        <div class="content">
+                        <h2>Pumpkin Seeds</h2><br>
+
+            <p> Pumpkin seeds are rich in many micronutrients that are important for brain function,including copper,iron,magnesium and zinc.Magnesium is essential for learning and memory.Your brain uses copper to help control nerve signals. </p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/nutrition/chocolate.jpg' %}" >
+
+        </div>
+        <div class="content">
+                        <h2>Dark Chocolate</h2><br>
+
+            <p> The Flavonoids in chocolate may help protect the brain. Studies have suggested that eating chocolate could boost both memory and mood.cocoa powder are packed with a few brain-boosting compounds,including caffeine and antioxidants.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+      <img src="{% static 'images/nutrition/nuts.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Nuts</h2><br>
+
+            <p> Nuts contain a host of brain-boosting nutrients, including vitamin E, healthy fats and plant compounds.Several nutrients in nuts, such as healthy fats, antioxidants and vitamin E. Vitamin E shields cell membranes from free radical damage.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/nutrition/eggs.jpg'%}"  >
+
+        </div>
+        <div class="content">
+                        <h2>Eggs</h2><br>
+
+            <p> Eggs are a rich source of several B vitamins and choline, which are important for proper brain functioning and development, as well as regulating mood. being deficient in two types of B vitamins — folate and B12 — has been linked to depression.</p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/nutrition/orange.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Orange</h2><br>
+
+            <p>Oranges and other foods that are high in vitamin C can help defend your brain against damage from free radicals.Eating sufficient amounts of vitamin C-rich foods can protect against age-related mental decline and Alzheimer’s disease. </p>
+        </div>
+    </div>
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/heart/avocado.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Avocado</h2><br>
+
+            <p>High in folate, avocados are thought to prevent the formation of brain tangles thought to cause Alzheimer's. Avocados have a high amount of potassium, which when combined with the omega-3s and oleic acid, can reduce blood pressure and a lower blood pressure.</p>
+        </div>
+    </div>
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/nutrition/peanuts.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Peanuts</h2><br>
+
+            <p>Peanuts are a legume with an excellent nutritional profile. They contain plenty of unsaturated fats and protein to keep a person's energy levels up throughout the day. Peanuts also provide key vitamins and minerals to keep the brain healthy.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% endblock %}

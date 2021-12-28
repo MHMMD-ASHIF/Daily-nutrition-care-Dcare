@@ -1,0 +1,265 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<html>
+<head>
+    <title >beginner</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:400px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:15px;
+
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.03);
+    opacity:1;
+    }
+
+
+
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:320px;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+
+        
+    .orgin
+    {
+        color:#444444;
+        justify-content: center;
+        background-color:#fff;
+        border-radius: 15px;
+        max-width:82%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+    .orgin:hover{
+        transform: scale(1.009);
+        
+    }
+    .orgin h2
+    {
+    color:gray;
+    text-align:center;
+    text-transform: uppercase;
+    margin-top:2%;
+    margin-bottom:2%;
+    }
+    .container .card h2{
+
+color: grey;
+font-size: 150%;
+font-weight: 600;
+}
+    
+
+
+    </style>
+</head>
+<body>
+    <div class="orgin">
+    <h2>Beginner Workouts</h2>
+    <p style="text-align:center" >Our 10 picks for beginner body weight exercises will provide a full-body workout.
+
+Complete 2 sets of 10 to 15 reps of each exercise, with 1 minute of rest between each move.
+
+This circuit should take about 15 minutes — a great beginner routine.</p>
+
+    <br></div>
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+    <img   src="{% static 'images/workout/beginner/bridge.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/beginner/bridge.gif'%}'" onmouseout="this.src='{% static 'images/workout/beginner/bridge.jpg'%}'">
+        </div>
+        <div class="content">
+            <h2>BRIDGE</h2><br>
+            <p>Activate your core and posterior chain (a fancy term for the backside of your body) with a bridge. This is a great exercise to use as a warmup.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img  src="{% static 'images/workout/beginner/chair.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/beginner/chair_squat.gif'%}'" onmouseout="this.src='{% static 'images/workout/beginner/chair.jpg'%}'">
+        </div>
+        <div class="content">
+            <h2>CHAIR SQUAT</h2><br>
+
+            <p>Squat to strengthen your legs and core, which will make everyday movements easier. Starting with a chair underneath you will help you master proper form.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img  src="{% static 'images/workout/beginner/knee.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/beginner/kneepushups.gif'%}'" onmouseout="this.src='{% static 'images/workout/beginner/knee.jpg'%}'">
+        </div>
+        <div class="content">
+                        <h2>KNEE PUSHUPS</h2><br>
+
+            <p>A beginner-style pushup, this move will help you build strength before attempting a<br> standard pushup.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img  src="{% static 'images/workout/beginner/stationary.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/beginner/stationary_lunges.gif'%}'" onmouseout="this.src='{% static 'images/workout/beginner/stationary.jpg'%}'">
+        </div>
+        <div class="content">
+                        <h2>STATIONARY LUNGE</h2><br>
+
+            <p>Hit your quads, hamstrings, and glutes with a stationary lunge. It helps for balance, stabilize, and support your entire body.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img  src="{% static 'images/workout/beginner/dog.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/beginner/plank_down_dog.gif'%}'" onmouseout="this.src='{% static 'images/workout/beginner/dog.jpg'%}'">
+
+        </div>
+        <div class="content">
+                        <h2>PLANK TO DOWNWARD</h2><br>
+
+            <p>Plank works your upper body, abs, glutes, and legs while Downward Dog stretches your <br> hamstrings and back. </p>
+        </div>
+    </div>
+
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img  src="{% static 'images/workout/beginner/DONKEY.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/beginner/Donkey-kicks.gif'%}'" onmouseout="this.src='{% static 'images/workout/beginner/donkey.jpg'%}'">
+
+        </div>
+        <div class="content">
+                        <h2>STRAIGHT LEG KICK</h2><br>
+
+            <p>A  Kick is typically practiced early in a workout to increase the heart rate and warm up the body. This move helps improve hip mobility.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+<img  src="{% static 'images/workout/beginner/bird_dog.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/beginner/bird_dog.gif'%}'" onmouseout="this.src='{% static 'images/workout/beginner/bird_dog.jpg'%}'">
+        </div>
+        <div class="content">
+                        <h2>BIRD DOG</h2><br>
+
+            <p>The bird dog is a simple core exercise that improves stability, encourages a neutral spine, and relieves low back pain.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img  src="{% static 'images/workout/beginner/formarm.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/beginner/forarm_plank.gif'%}'" onmouseout="this.src='{% static 'images/workout/beginner/formarm.jpg'%}'">
+
+        </div>
+        <div class="content">
+                        <h2>FOREARM PLANK</h2><br>
+
+            <p>Although it's tough, when done correctly, the Forearm Plank strengthens the abs, <br>legs and core.</p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img  src="{% static 'images/workout/beginner/bicycle.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/beginner/bicycle_crunches.gif'%}'" onmouseout="this.src='{% static 'images/workout/beginner/bicycle.jpg'%}'">
+
+        </div>
+        <div class="content">
+                        <h2>BICYCLE CRUNCH</h2><br>
+
+            <p>Adding bicycle crunches to your workout routine helps to increase core strength, slims down your waist and improves your stability and flexibility.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

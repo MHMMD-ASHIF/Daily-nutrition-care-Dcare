@@ -1,0 +1,59 @@
+{% extends 'accounts/main.html' %}
+
+{% block content %}
+{% include 'accounts/status.html' %}
+
+<br>
+<div class="row">
+    <div class="col-mod-5">
+        <h4 style="text-align:center;background-color:white;color:red" >CUSTOMERS</h4>
+        <hr>
+        <div class="card card-body" >
+            <a class="btn btn-primary btn-sm btn-block" href="">Create customer</a>
+            <table class="table table-sm" style="background-color:powderblue;color:black">
+                <tr>
+                    <th>customer</th>
+                    <th>phone</th>
+                </tr>
+                {% for customer in customers %}
+                <tr>
+                    <td>{{customer.name}}</td>
+                    <td>{{customer.phone}}</td>
+                   <td><a class="btn btn-sm btn-info" href="{% url 'customer' customer.id %}">view</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+<br>
+    <div class ="col-mod-7" >
+        <h4  style="background-color:white;color:red;text-align:center">Last 5 orders</h4>
+        <hr>
+        <div class="card card-body">
+            <h3 style="background-color:white;color:red;text-align: center"   >Order Summary</h3><br>
+            <table class="table table-sm" style="background-color:powderblue;" >
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Date Ordered</th>
+                    <th>Status</th>
+
+
+                </tr>
+                 {% for order in orders %}
+                <tr>
+                    <td>{{order.product}}</td>
+                    <td>{{order.product.Category}}</td>
+                    <td>{{order.date_created}}</td>
+                    <td>{{order.status}}</td>
+                    <td><a class="btn btn-sm btn-info" href="{% url 'update_order'  order.id %}">Update</a> </td>
+                    <td><a class="btn btn-sm btn-danger" href="{% url 'delete_order' order.id %}">Delete</a> </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

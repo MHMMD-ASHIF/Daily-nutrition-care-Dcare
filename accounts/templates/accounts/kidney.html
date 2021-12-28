@@ -1,0 +1,276 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title >Foods For Brain</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:300px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.1);
+    opacity:1;
+    }
+
+    .container .card .circle
+    {
+    position: relative;
+    width:100%;
+    height:100%;
+    background:#000;
+    clip-path:circle(220px at center 0);
+    text-align:center;
+    }
+    .container .card .circle h2
+    {
+    color:#fff;
+    font-size:4.5em;
+    padding:30px 0;
+    }
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:60%;
+        clip-path:circle(220px at center 0);
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>FOODS FOR KIDNEY</h1>
+
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+          <img src="{% static 'images/kidney/kale.jpg'%}"  >
+        </div>
+        <div class="content">
+            <h2>Kale</h2><br>
+            <p>Many healthy greens like spinach and kale are high in potassium and difficult to fit into a renal diet. However, arugula is a nutrient-dense green that is low in potassium, making it a good choice for kidney-friendly salads and<br> side dishes.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/kidney/collardgreens.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Collard Greens</h2><br>
+
+            <p>Dark leafy green vegetables such as kale, spinach, chard, and collard greens are loaded with vitamins A and C, calcium, and many other important minerals. Kale also is a significant source of carotenoids, flavonoids, and vitamin K.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img src="{% static 'images/kidney/spinach.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Spinach</h2><br>
+
+            <p>  Many healthy greens like spinach and kale are high in potassium and difficult to fit into a renal diet. However, arugula is a nutrient-dense green that is low in potassium, making it a good choice for kidney-friendly salads and <br>side dishes.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/kidney/turnip.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Turnip Greens</h2><br>
+
+            <p>Too many turnip greens -- which are high in vitamin K -- can cause your blood to clot faster than normal. You have a kidney condition. Your kidneys remove extra potassium from your body. If they don't work well, you may have too much potassium in your system.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/kidney/broccoli.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Broccoli</h2><br>
+
+            <p>Broccoli is the cruciferous family of vegetable. They're on the alkaline side, making your diet less acidic and providing less pressure on your kidneys. They are loaded with vitamins A and C, as well as calcium and other important minerals for Kidney health.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+       <img src="{% static 'images/kidney/asparagus.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Asparagus</h2><br>
+
+            <p>Asparagus can act as a natural diuretic, This can help rid the body of excess salt and fluid, making it especially good for people suffering from edema and high blood pressure. It also helps flush out toxins in kidneys and prevent kidney stone.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/kidney/soybean.png'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Soybean</h2><br>
+
+            <p>Sweet berries contain antioxidants called anthocyanins, which may protect against certain cancers, cognitive decline, and diabetes. They also make a fantastic addition to a kidney-friendly diet, as they are low in sodium, phosphorus, and potassium.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+      <img src="{% static 'images/kidney/pineapple.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Pineapple</h2><br>
+
+            <p>Fortunately, pineapple makes a sweet, low potassium alternative for those with kidneys problems. Plus, pineapple is rich in fiber, manganese, vitamin C, and bromelain, an enzyme that helps reduce inflammation. It helps to improve kidney health.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/kidney/onion.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Onion</h2><br>
+
+            <p>Onions are excellent for providing sodium-free flavor to renal-diet dishes. Reducing salt intake can be challenging, making finding flavorful salt alternatives a must. Onions with garlic and olive oil adds flavor to dishes without compromising your kidney health. </p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/kidney/pumkin.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Pumpkin</h2><br>
+
+            <p>Although pumpkin is a higher potassium food, in moderation it can be beneficial for your overall health. Pumpkin is packed with nutritional benefits that are great for the renal diet including fiber, Vitamin C and beta-carotene. Enjoy this fall delights in moderation.</p>
+        </div>
+    </div>
+
+
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/kidney/oliveoil.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Olive Oil</h2><br>
+
+            <p>Olive oil is a healthy source of fat and phosphorus-free, making it a great option for people with kidney disease. Frequently, people with advanced kidney disease have trouble keeping weight on, making healthy, high calorie foods like olive oil important.</p>
+        </div>
+    </div>
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/kidney/lettuce.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Lettuce</h2><br>
+
+            <p>Lettuce is a popular vegetable and is usually eaten raw in salads. Because CKD patients with hyperkalemia <br> need to limit potassium intake from meals, they are not able to eat large quantities of raw vegetables such as lettuce.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% endblock %}

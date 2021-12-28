@@ -1,0 +1,165 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+ <html lang="en">
+ <head>
+ 	<meta charset="UTF-8">
+ 	<title>About US</title>
+
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ 	<style>
+
+		body{
+			background: #fff;
+			font-family: tahoma;
+			text-align: justify;
+			overflow: hidden;
+
+		}
+
+		#about{
+			padding-top: 98px;
+			padding-bottom: 101px;
+
+		}
+
+
+
+
+
+
+		#about .p-first{
+			margin-bottom: 30px;
+		}
+
+
+		#about h2{
+			margin-bottom: 47px;
+			margin-top: 12px;
+
+		}
+
+
+
+
+
+		#about .about-link li{
+			display: inline-block;
+		}
+
+		#about .about-link li a i{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			line-height: 50px;
+			text-align: center;
+			border: 1px solid  #1ABC9C;
+			margin-right: 10px;
+			font-size: 22px;
+			color:  #1ABC9C;
+			transition: all .3s;
+
+		}
+
+
+
+
+
+		#about .about-img{
+			position: relative;
+
+		}
+
+
+
+
+
+		.color-3{
+			color: #1ABC9C;
+		}
+
+
+
+
+		p{
+			margin-bottom: 0;
+			font-size: 16px;
+			line-height: 24px;
+			color:#1ABC9C;
+		}
+
+		.btn-danger{
+			border-radius: 0;
+			padding: 10px 20px;
+		}
+
+
+
+	</style>
+
+
+ </head>
+ <body><br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+ 	<section id="about">
+
+	<div class="container">
+		<div class="row">
+		<div class="col-md-5">
+			<div class="about-img">
+
+            <img class="man" src="{% static 'images/about_us/logo.jpg' %}"  height="300" width="300" alt="">
+
+			</div>
+		</div>
+		<br>
+		<div class="col-md-7 about-right">
+
+			<h2 class="color-3"><b>ABOUT US</b>
+			</h2>
+
+			<p class="p-first " style="color:#666666">
+				D-CARE is one of the best assistant web application for your nutrition intake. We provide several details about food  and strengthening workouts. This application will help you to maintain your daily scheduling. We provide BMI calculator and calorie intake calculator this will help you to know about your health condition so you can easily decide which food do want to consume daily.
+				 This is our major aim, Most of us not concerned about our health. A large number of people consuming unwanted fast foods and junk foods these foods are harmful for our health and internal organs, So here we sharing some useful data about food consuming and we are selling some good nutrition products.
+			</p>
+
+			<br><br>
+
+
+			<ul class="about-link"  >
+				<li><a href="https://www.instagram.com/" target="-black"><i class="fa fa-instagram"></i></a></li>
+
+				<li><a href="https://www.facebook.com/" target="-black"><i class="fa fa-facebook"></i></a></li>
+
+
+				<li><a href="https://twitter.com/login/" target="-black"><i class="fa fa-twitter"></i></a></li>
+
+
+				<li><a href="https://www.linkedin.com/login/" target="-black"><i class="fa fa-linkedin"></i></a></li>
+
+
+				<li><a href="https://www.youtube.com/" target="-black"><i class="fa fa-youtube-play"></i></a></li>
+
+			</ul>
+
+
+		</div>
+
+		</div>
+	</div>
+
+ 	</section>
+
+ </body>
+ </html>
+
+{% endblock %}

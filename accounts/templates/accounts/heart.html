@@ -1,0 +1,273 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title >Foods For Brain</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:300px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.1);
+    opacity:1;
+    }
+
+    .container .card .circle
+    {
+    position: relative;
+    width:100%;
+    height:100%;
+    background:#000;
+    clip-path:circle(220px at center 0);
+    text-align:center;
+    }
+    .container .card .circle h2
+    {
+    color:#fff;
+    font-size:4.5em;
+    padding:30px 0;
+    }
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:60%;
+        clip-path:circle(220px at center 0);
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>FOODS FOR HEART</h1>
+
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+          <img src="{% static 'images/nutrition/fattyfish.jpg'%}">
+        </div>
+        <div class="content">
+            <h2>Fatty Fish</h2><br>
+            <p> Recommended that people eat fish rich in unsaturated fats at least twice a week. The unsaturated fats in fish are called omega-3 fatty acids. Omega-3 fatty acids and other nutrients in fish may benefit heart health and reduce the risk of dying of heart disease.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/heart/avocado.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Avocado</h2><br>
+
+            <p>The latest research study found that majority of the fat in an avocado is monounsaturated fat, which may help lower LDL ("bad") cholesterol. They also contain lots of dietary fiber, vitamins, minerals and antioxidants, which also help to keep your heart healthier.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img src="{% static 'images/heart/beans.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Beans</h2><br>
+
+            <p> Mild, tender black beans are packed with heart-healthy nutrients. Folate, antioxidants, and magnesium can help lower blood pressure. Their fiber helps control both cholesterol and blood sugar levels. Add beans to boost soups and salads.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/heart/tomato.jpg'%}" >
+        </div>
+        <div class="content">
+                        <h2>Tomatoes</h2><br>
+
+            <p>Lycopene  lower your levels of LDL, or “bad” cholesterol, as well as your blood pressure. And that may lower your chances of heart disease. Other nutrients in tomatoes, like vitamins B and E and antioxidants called flavonoids, may boost your heart health.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/heart/almond.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Almond</h2><br>
+
+            <p>Help to improve lipid, or fat, levels in the blood. This can benefit heart health. In a study from 2014, scientists found that almonds significantly increased the levels of antioxidants in the bloodstream, reduced blood pressure, and improved blood flow</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+       <img src="{% static 'images/heart/seeds.jpg'%}" >
+        </div>
+        <div class="content">
+                        <h2>Seeds</h2><br>
+
+            <p>Seeds contain all the starting materials necessary to develop into complex plants. Because of this, they are extremely nutritious.Chia seeds are a good source of omega-3 fats and are effective at lowering blood sugar and reducing risk factors for heart disease.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/heart/garlic.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Garlic</h2><br>
+
+            <p>Garlic  curing a cold to lowering blood pressure and cholesterol levels. Garlic contains vitamins C and B6, manganese and selenium, but it's a chemical called allicin, a type of antioxidant, which is thought to be responsible for its positive effects.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+      <img src="{% static 'images/heart/oliveoil.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Olive Oil</h2><br>
+
+            <p>Olive oil may help lower the risk of heart disease, according to preliminary research that also showed it was beneficial as a substitute for butter or mayonnaise. Olive oil also helps with giving antioxidants that can protect red blood cells from damage.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/heart/greentea.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Green Tea</h2><br>
+
+            <p> Lowering your risk of cardiovascular disease may be as easy as drinking green tea. Aromatic tea may lower LDL cholesterol and triglycerides, which may be responsible for the tea's association with reduced risk of death from heart disease.</p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/heart/leaf.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Leaf Vegetables</h2><br>
+
+            <p>Dark leafy greens are rich in nutrients, vitamins and minerals – especially an important B vitamin called folate that is helpful for heart disease prevention. Spinach, kale and collard greens are well-known for their wealth of vitamins, minerals and antioxidants.</p>
+        </div>
+    </div>
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/heart/berries.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Berries</h2><br>
+
+            <p>Good source of polyphenols, especially anthocyanins, micronutrients, and fiber. In epidemiological and clinical studies, these constituents have been associated with improved cardiovascular risk profiles.It reduces risk of heart diseases.</p>
+        </div>
+    </div>
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/heart/edamame.jpg'%}"  >
+
+        </div>
+        <div class="content">
+                        <h2>Edamame</h2><br>
+
+            <p>In addition to being a decent source of soy protein, edamame is rich in healthy fiber, antioxidants and vitamin K. These plant compounds may reduce the risk of heart disease and improve the blood lipid profile, a measure of fats including cholesterol.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,424 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<head>
+
+    <title>Nutrition</title>
+    <link rel="icon" href="{% static 'icons/nutrition.png' %}">
+    </head>
+<style>
+    .container_fluid .carousel-inner img{
+    height:40vw;}
+
+        .carousel-inner {
+
+  -webkit-animation: slide 5s forwards infinite;
+}
+.carousel-item active:nth-child(2) {
+  -webkit-animation-delay: 2s;
+}
+.carousel-item:nth-child(3) {
+  -webkit-animation-delay: 5s;
+}
+.carousel-item:nth-child(4) {
+  -webkit-animation-delay: 5s;
+}
+.carousel-inner
+{
+
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
+}
+</style>
+
+
+<div class="container_fluid  ">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/nutrition/w_health2.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/nutrition/w_health.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/nutrition/w_health1.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+      <div class="carousel-item">
+      <img src="{% static 'images/nutrition/w_human.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+.container{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-between;
+}
+.container .box{
+position: relative;
+width:350px;
+padding:40px;
+background:#fff;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+border-radius:4px;
+margin:20px;
+box-sizing:border-box;
+overflow:hidden;
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 20%;
+  padding: 0 8px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+
+  }
+}
+
+
+.card {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 1px;
+  text-align: center;
+  background-color: #f1f1f1;
+  border-radius: 20px;
+
+}
+
+
+.card:hover {
+  filter: blur(0px);
+    transform:scale(0.96);
+    opacity:1;
+    }
+.column .card
+{
+  border-radius: 25px;
+  margin-bottom:50px;}
+
+.column .card h3
+{
+ font-size: 20px;
+ color:#727272;
+ }
+
+
+.column .card img{
+  border-radius: 25px;
+    margin-bottom:20px;
+  height:150px;}
+
+.header h1{
+text-align:center;
+color:#727272;
+margin-bottom:20px;
+}
+.header h2{
+color:#727272;
+margin-bottom:10px;}
+.header p{
+font-size:16px;
+margin-bottom:30px;}
+
+.header{
+
+  background-color:#fff;
+  background-size: contain;
+  color:#444444;
+  box-shadow: rgba(218, 218, 224, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  height:auto ;
+  width: 95%;
+  margin-left: 2%;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+}
+.header:hover{
+  transform: scale(1.003);
+}
+
+.box{
+  height: auto;
+  margin-left: 10%; margin-top: 50px;
+  margin-right: 10%;
+  text-align: justify;
+
+ 
+
+}
+
+
+  .header p{
+  font-size:16px;
+  margin-bottom:30px;}
+  .ready{
+    font-size:16px;
+    margin-bottom:30px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height:auto ;
+  width: 95%;
+margin-left: 2%;
+  overflow: hidden;
+  text-align: justify;
+  border-radius: 20px;
+  color:#666666;
+  }
+  .ready:hover{
+  transform: scale(1.001);
+}
+  .ready h2{
+    text-align:left;
+    color:#666666;
+    margin-bottom:20px;
+  }
+
+.ready-two{
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  margin-left: 10%; margin-top: 50px;
+  margin-right: 10%;
+  text-align: justify;
+
+}
+</style>
+
+
+<body>
+<div class="header">
+<h1>NUTRITION CARE</h1>
+<div class="Container">
+
+    <div class="box">
+<h2 >{{title}}</h2>
+
+<br><!--
+<img src="{% static 'images/nutrition_home/brain.jpg'%}"    class="card-img" alt="...">-->
+
+<p>{{description}}</p>
+    </div></div></div>
+
+
+
+    <div class="ready" >
+      <div class="ready-two">
+        
+<h2>{{title_two}}</h2>
+<p>{{description_two}}</p>
+</div>
+</div></div>
+<hr>
+<div><h2 style="opacity: 0;">hello</h2></div>
+<div class="column"  >
+
+    <div class="card" >
+        <h3 ><strong>BRAIN</strong></h3>
+        <a href="{% url 'brain' %}" class="btn "><img src="{% static 'images/nutrition_home/brain.jpg'%}"    class="card-img-top" alt="..."></a>
+
+
+    </div>
+  </div>
+
+
+ <div class="column"  >
+
+    <div class="card" >
+        <h3 ><strong>EYES</strong></h3>
+        <a href="{% url 'eyes' %}" class="btn "><img src="{% static 'images/nutrition_home/eyes.jpg'%}"   class="card-img-top" alt="..."></a>
+
+
+    </div>
+  </div>
+
+
+
+ <div class="column"  >
+
+    <div class="card" >
+        <h3 ><strong>HEART</strong></h3>
+        <a href="{% url 'heart' %}" class="btn "><img src="{% static 'images/nutrition_home/heart.gif'%}"    class="card-img-top" alt="..."></a>
+
+
+    </div>
+  </div>
+
+
+
+
+ <div class="column"  >
+
+    <div class="card" >
+        <h3 ><strong>KIDNEY</strong></h3>
+        <a href="{% url 'kidney' %}" class="btn "><img src="{% static 'images/nutrition_home/kidney.jpeg'%}"   class="card-img-top" alt="..."></a>
+
+
+    </div>
+  </div>
+
+
+
+ <div class="column"  >
+
+    <div class="card">
+        <h3 ><strong>BONES</strong></h3>
+        <a href="{% url 'bones' %}" class="btn "><img src="{% static 'images/nutrition_home/bone.jpg'%}"   class="card-img-top" alt="..."></a>
+
+
+    </div>
+  </div>
+
+
+
+
+
+ <div class="column"  >
+
+    <div class="card" >
+        <h3 ><strong>MUSCLES</strong></h3>
+        <a href="{% url 'muscles' %}" class="btn "><img src="{% static 'images/nutrition_home/muscle.jpg'%}"    class="card-img-top" alt="..."></a>
+
+
+    </div>
+  </div>
+
+
+
+ <div class="column"  >
+
+    <div class="card" >
+        <h3 ><strong>LIVER</strong></h3>
+        <a href="{% url 'liver' %}" class="btn "><img src="{% static 'images/nutrition_home/liver.jpg'%}"    class="card-img-top" alt="..."></a>
+
+
+    </div>
+  </div>
+
+
+
+ <div class="column"  >
+
+    <div class="card" >
+        <h3 ><strong>LUNGS</strong></h3>
+        <a href="{% url 'lungs' %}" class="btn "><img src="{% static 'images/nutrition_home/lungs.jpg'%}"  class="card-img-top" alt="..."></a>
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+ <div class="column"  >
+
+    <div class="card" >
+        <h3><strong>SKIN</strong></h3>
+        <a href="{% url 'skin' %}" class="btn "><img src="{% static 'images/nutrition_home/skin.jpg'%}"  class="card-img-top" alt="..."></a>
+
+
+    </div>
+  </div>
+
+
+
+ <div class="column"  >
+
+    <div class="card">
+        <h3 ><strong>HAIR</strong></h3>
+        <a href="{% url 'hair' %}" class="btn "><img src="{% static 'images/nutrition_home/hair.jpg'%}"   class="card-img-top" alt="..."></a>
+
+
+    </div>
+  </div>
+<br>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

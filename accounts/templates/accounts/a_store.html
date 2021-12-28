@@ -1,0 +1,66 @@
+{% extends 'accounts/a_main.html' %}
+
+{% load static %}
+{% block content %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Cart</title>
+<style>
+footer{
+    
+    margin-top: 50px;
+   
+}
+
+
+
+
+</style>
+</head>
+<body>
+<div class="kia">
+
+
+ <main>
+         <section class="banner">
+             <div>
+                 <h1>50%</h1>
+                 <h1>OFF</h1>
+                 <h1>Today</h1>
+                 <button>Buy-now</button>
+             </div>
+             <img src="{% static 'images/workout/protein.jpg'%}" alt="">
+
+         </section>
+ </main>
+  <section class="cl">
+      <h3>BEST SELLER</h3></section></div>
+
+
+<div class="row">
+
+
+    {% for product in products %}
+    <div class="col-lg-3">
+        <div class="box-element " >
+
+            <img class="thumbnail" src="{{product.imageURL}}">
+
+            <h6><strong>{{product.name}}</strong></h6>
+            <hr>
+             <h5 style="display: inline-block;float:right;font-size:20px;">₹{{product.Price|floatformat:2}}</h5>
+            <button data-product="{{product.id}}" data-action="add" class="btn  add-btn update-cart">Add to cart</button>
+                    <!--<a class="btn btn-outline-success" href="#">View</a>-->
+
+
+        </div>
+
+        </div>
+   {% endfor %}
+</div>
+<footer>
+  
+</footer>
+</body>
+{% endblock %}

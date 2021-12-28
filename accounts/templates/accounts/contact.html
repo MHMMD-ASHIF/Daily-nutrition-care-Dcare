@@ -1,0 +1,195 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initil-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        @import url('http://fonts.googlrapid.com/css2?family=Poppins:wght@200;400;400;500;600;700;900&display=swap');
+
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+        }
+        .contact
+        {
+        position: relative;
+        min-height: 65vh;
+        padding: 50px 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+         background:url(../images/contact/contact.jpg);
+        }
+        .contact .content
+        {
+        min-width: 800px;
+        text-align: center;
+
+        }
+        .contact .content h2
+        {
+        font-size: 36px
+        max-width: 500px;
+        color:#fff;
+        }
+        .contact .content p
+        {
+        max-width: 900px;
+        color: #444444;
+        }
+        .container
+        {
+        width: 30vw;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-top" 30px;
+        }
+        .container .contactInfo
+        {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        }
+        .container .contactInfo .box
+        {
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+        }
+        .container .contactInfo .box .icon
+        {
+        min-width: 60px;
+        height:60px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size; 22px;
+        }
+        .container .contactInfo .box .text
+        {
+        display: flex;
+        margin-left: 20px;
+        font-size: 13px;
+        color: #fff;
+        flex-direction: column;
+        font-weight: 300;
+        }
+        .container .contactInfo .box .text h3
+        {
+        font-weight: 500;
+        color: #444444;
+        }
+        #ic2{
+        position: absolute;
+        right:100px;
+
+        }
+        #ic1{
+        position: absolute;
+        left:200px;
+
+        }
+         .container .contactInfo .box .text p
+         {
+         color:#444444;
+         }
+ @media only screen and (max-width: 520px){
+#ic2{
+
+        height: 125vh;
+
+
+
+        display: none;
+
+        padding:  1rem .9rem !important;
+
+    footer .rights
+        padding: 0 1.4rem;
+        text-align: center;
+
+        width: 80% !important;
+    }
+
+}
+
+
+
+    </style>
+</head>
+
+
+<body>
+<section class="contact"  >
+    <div class="content">
+        <h2 style="color:green;">CONTACT US</h2><br>
+        <p>D-CARE is proposed for daily nutrition care of both men and women. This system will helpful for identify best nutritious food and we can choose the right food, Then we can easily schedule our daily food intake effective. D-CARE is own of the best clubbing web application for maintain our self healthy. It includes BMI calculator, Daily Calorie intake calculator and strengthening workouts.
+                We always happy to interact with our users and you can contact with us anytime, D-CARE customer service is available for 24x7. </p>
+    </div><br><br>
+    <div class="container">
+        <div class="contactInfo">
+            <div id="ic1" class="box">
+                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i> </div>
+                <div class ="text">
+                    <h3>Address</h3>
+                    <p>D_CARE</p>
+                    <P>Muhammed Ashif - Manager</P>
+                    <p>Palakkad, Kerala</p>
+                    <p>Zip: 678597</p>
+               </div>
+            </div>
+
+
+  <div id="ic2" class="box">
+                <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i> </div>
+                <div class ="text">
+                    <h3>Phone</h3>
+                    <p>9747940333</p>
+                    <p>9497841727</p>
+               </div>
+            </div>
+
+
+               <div id="ic3" class="box">
+                <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i> </div>
+                <div class ="text">
+                    <h3>Email</h3><br>
+                    <p>aashy135@gmail.com</p>
+                    <p>anzilcbr250@gmail.com</p>
+
+               </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+
+
+
+
+</html>
+
+{% endblock %}

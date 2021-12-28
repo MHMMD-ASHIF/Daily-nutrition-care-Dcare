@@ -1,0 +1,265 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<html>
+<head>
+    <title >Intermediate</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:400px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:15px;
+
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.03);
+    opacity:1;
+    }
+
+
+
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:320px;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+
+.orgin {
+    color:#444444;
+        justify-content: center;
+        background-color:#fff;
+        border-radius: 15px;
+        max-width:82%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: justify;
+    }
+    .orgin:hover{
+        transform: scale(1.009);
+        
+    }
+.orgin h2
+{
+    color:gray;
+text-align:center;
+text-transform: uppercase;
+margin-top:2%;
+margin-bottom:2%;
+
+}
+.container .card h2{
+
+color: grey;
+font-size: 150%;
+font-weight: 600;
+}
+
+    </style>
+</head>
+<body>
+    <div class="orgin">
+    <h2>Intermediate  Workouts</h1>
+<p style="text-align:center;" >If you’ve mastered the beginner routine, you’re ready to take on these intermediate moves.
+
+Complete 2 sets of 10 to 15 reps of each exercise below, then move on to the next after 1 minute of rest.
+
+An alternative, more advanced approach is to complete timed rounds. For instance, complete 1 minute of each exercise and repeat the circuit twice.
+
+    Compete against yourself to get just 1 or 2 more reps each time you complete the routine.</p>
+
+</div>
+
+    <br>
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+<img  src="{% static 'images/workout/intermediate/single_leg.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/intermediate/single_leg_bridge.gif'%}'" onmouseout="this.src='{% static 'images/workout/intermediate/single_leg.jpg'%}'">
+        </div>
+        <div class="content">
+            <h2>SINGLE LEG BRIDGE</h2><br>
+            <p>The single leg bridge is a great toning exercise for your abs and thighs and it also helps to lift and sculpt the buttocks.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img  src="{% static 'images/workout/intermediate/squat.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/intermediate/squat.gif'%}'" onmouseout="this.src='{% static 'images/workout/intermediate/squat.jpg'%}'">
+        </div>
+        <div class="content">
+            <h2> SQUAT</h2><br>
+
+            <p>Squat work up your quadriceps, hamstrings, calves, abdominal muscles, lower back and your butt too. It promote body-wide muscle building.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img  src="{% static 'images/workout/intermediate/pushups.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/intermediate/pushups.gif'%}'" onmouseout="this.src='{% static 'images/workout/intermediate/pushups.jpg'%}'">
+        </div>
+        <div class="content">
+                        <h2> PUSHUPS</h2><br>
+
+            <p>Traditional pushups are beneficial for building upper body strength. They work the triceps, pectoral muscles, and shoulders.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img  src="{% static 'images/workout/intermediate/walking.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/intermediate/walking_lunge.gif'%}'" onmouseout="this.src='{% static 'images/workout/intermediate/walking.jpg'%}'">
+        </div>
+        <div class="content">
+                        <h2>WALKING LUNGE</h2><br>
+
+            <p>Walking lunges can help increase your range of motion by helping to increase flexibility, and loosen up your hips and hamstrings.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img  src="{% static 'images/workout/intermediate/pike.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/intermediate/pike_pushups.gif'%}'" onmouseout="this.src='{% static 'images/workout/intermediate/pike.jpg'%}'">
+
+        </div>
+        <div class="content">
+                        <h2>PIKE PUSHUP</h2><br>
+
+            <p>The pike push up is a great exercise for building shoulder strength and improving core stability. This exercise works your shoulders, arms, chest, back and core. </p>
+        </div>
+    </div>
+
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img  src="{% static 'images/workout/intermediate/getup.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/intermediate/getup_squat.gif'%}'" onmouseout="this.src='{% static 'images/workout/intermediate/getup.jpg'%}'">
+
+        </div>
+        <div class="content">
+                        <h2>GETUP SQUAT </h2><br>
+
+            <p>Jump squats increase your explosive power, improve upper and lower body strength, and burn calories faster than regular squats.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+<img  src="{% static 'images/workout/intermediate/superman.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/intermediate/superman.gif'%}'" onmouseout="this.src='{% static 'images/workout/intermediate/superman.jpg'%}'">
+        </div>
+        <div class="content">
+                        <h2>SUPERMAN</h2><br>
+
+            <p>As well as strengthening your lower and upper back, this move also works your glutes and hamstrings, and increases your core strength.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img  src="{% static 'images/workout/intermediate/plank_with.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/intermediate/plank_with_alternating_leglift.gif'%}'" onmouseout="this.src='{% static 'images/workout/intermediate/plank_with.jpg'%}'">
+
+        </div>
+        <div class="content">
+                        <h2>PLANK WITH LEG LIFT</h2><br>
+
+            <p>The plank leg lifts is a full body exercise you can do anywhere, that trains your core, legs, glutes, and shoulders.</p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+<img  src="{% static 'images/workout/intermediate/kneel.jpg'%}" height="300"  onmouseover="this.src='{% static 'images/workout/intermediate/kneeling_sideplank.gif'%}'" onmouseout="this.src='{% static 'images/workout/intermediate/kneel.jpg'%}'">
+        </div>
+        <div class="content">
+                        <h2>KNEELING SIDE PLANK</h2><br>
+
+            <p>As the transversus abdominus gets stronger from doing planks, it will tighten your waistline all the way around in a way that crunches never could.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,588 @@
+
+
+{% load static %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="{% static 'css/Style.css' %}">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+.icon-bar {
+  width: 100%;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 16.6%;
+  text-align: center;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+  color: #555;
+  font-size: 32px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+
+
+    .manic h1{
+font-family: var(--Lexend);
+
+
+  font-size: 3em;
+
+  text-align:center;
+
+
+   clear: both;
+ background-color:#e4e3ee;
+ overflow: hidden;
+
+
+  margin-top: calc(5vh - 1em);
+        }
+         .manner_sub{
+         background: #CA4246;
+  background-color: #CA4246;
+  background: conic-gradient(
+    #CA4246 16.666%,
+    #E16541 16.666%,
+    #E16541 33.333%,
+    #F18F43 33.333%,
+    #F18F43 50%,
+    #8B9862 50%,
+    #8B9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #A7489B 83.333%);
+
+
+  background-size: 57%;
+  background-repeat: repeat;
+
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: rainbow-text-animation-rev 0.5s ease forwards;
+
+  cursor: pointer;
+}
+
+
+
+section {
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.scroll-down {
+  height: 60px;
+  width: 90px;
+
+  border: transparent;
+  position: absolute;
+float:center;
+left:30%;
+ scroll-behavior: smooth;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 30px;
+  width: 30px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 6px solid white;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
+.scroll-down:hover{
+
+  transform:scale(1.2);
+}
+.scroll-down::before {
+  top: 30%;
+  animation-delay: 0.5s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
+}
+
+@keyframes scroll-down {
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+.scroll-down-two{
+
+ height: 60px;
+  width: 90px;
+  border: transparent;
+  position: absolute;
+float:center;
+left:60%;
+ scroll-behavior: smooth;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.scroll-down-two::before,
+.scroll-down-two::after {
+  content: "";
+  position: absolute;
+
+  top: 20%;
+  left: 50%;
+  height: 30px;
+  width: 30px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 6px solid white;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
+.scroll-down-two:hover{
+
+  transform:scale(1.2);
+}
+.scroll-down-two::before {
+  top: 30%;
+  animation-delay: 0.5s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
+}
+
+
+
+
+</style>
+
+</head>
+
+
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+
+<nav>
+    <div class="icon-bar">
+          <a class="active" style="background-color: #4CAF50;color:#fff;" href="{% url 'home' %}"><i class="fa fa-home"></i></a>
+          <a href="{% url 'bmi' %}"><i class="fa fa-calculator"></i></a>
+              <a href="{% url 'calorie' %}"><i class="fa fa-battery"></i></a>
+          <a href="{% url 'store' %}"><i class="fa fa-shopping-cart"></i></a>
+          <a  href="{% url 'chat' %}"><i class="fa fa-weixin"></i></a>
+           <a  href="{% url 'account' %}"><i class="fa fa-user"></i></a>
+
+    </div>
+</nav>
+
+
+
+
+
+    <main>
+
+
+
+        <section class="site-title">
+            <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+              <!--  <h3>D-CARE</h3>
+                <h1>Daily Nutrition Care</h1>
+                <button id="mymac" class="btn" style="background:#fff;color:#000000; ">CARE</button>-->
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+    <a href="#sec-2">
+      <div class="scroll-down"></div>
+    </a>
+
+         <a href="#sec-2">
+      <div class="scroll-down-two"></div>
+    </a>
+
+
+
+
+
+        <section id="sec-2">
+            <div class="blog">
+                <div class="container">
+                    <div class="owl-carousel owl-theme blog-post">
+                        <div class="blog-content" data-aos="fade-right" data-aos-delay="200">
+                            <img src="{% static 'images/home/nutrition.png'%}" height="200px" alt="post-1">
+                            <div class="blog-title">
+                                <h3>NUTRITION</h3>
+                                <a href="{% url 'nutrition' %}"><button class="btn btn-blog" >Explore</button></a>
+
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-in" data-aos-delay="200">
+                            <img src="{% static 'images/home/workout.jpg'%}" height="200px" alt="post-1">
+                            <div class="blog-title">
+                                <h3>WORKOUT</h3>
+                                <a href="{% url 'workout' %}"><button class="btn btn-blog">Explore</button></a>
+
+                            </div>
+                        </div>
+                        <div class="blog-content" data-aos="fade-left" data-aos-delay="200">
+                            <img src="{% static 'images/home/healthy1.jpg'%}"  height="200px" alt="post-1">
+                            <div class="blog-title">
+                                <h3>MENU</h3>
+                              <a href="{% url 'menu' %}"><button class="btn btn-blog">Explore</button></a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="owl-navigation">
+                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left" st></i></span>
+                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="container">
+            <div class="site-content">
+                <div class="posts">
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="{% static 'images/assets/Blog-post/healthy.jpg' %}"  style="border-radius:20px;" class="img" alt="blog1">
+                            </div>
+
+                        </div>
+                        <div class="post-title">
+                            <a>What Is Good Nutrition? Food & Nutrition Overview !</a>
+                            <p>The effective management of food intake and nutrition are both key to good health.
+                                Smart nutrition and food choices can help prevent disease.
+                                Eating the right foods can help your body cope more successfully with an ongoing illness.
+                                Understanding good nutrition and paying attention to what you eat can help you maintain or improve your health.
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="{% static 'images/assets/Blog-post/dcare_shop.jpg' %}"class="img" alt="blog1">
+
+                            </div>
+
+
+                        </div>
+                        <div class="post-title">
+                            <a>What is Ecommerce?Do you like shopping? For what kinds of things? D_CARE shoppe !</a>
+                            <p>Ecommerce, also known as electronic commerce or internet commerce,
+                                refers to the buying and selling of goods or services using the internet,
+                                and the transfer of money and data to execute these transactions.
+                                Ecommerce is often used to refer to the sale of physical products online,
+                                but it can also describe any kind of commercial transaction that is facilitated through the internet.
+                                We provide our D-CARE shoppe for quality and essential nutrition for body.
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="{% static 'images/assets/Blog-post/chat.jpg' %}" class="img" alt="blog1">
+                            </div>
+
+                        </div>
+                        <div class="post-title">
+                            <a >What is a Chatbot? D-CARE Virtual Assistant for entertainment !  </a>
+                            <p>A chatbot is a computer program that is designed to simulate conversations with human users,
+                                typically on the Internet. Chatbots act as automated virtual assistants,
+                                capable of communicating with people through text messages on instant messaging platforms, forums, and onsite live chat apps.
+
+                                        While they have their limitations, AI-powered chatbots are getting “smarter” over time. Soon,
+                                it may be hard to distinguish whether you are communicating with a human or a computer. So we provide D-CARE chatbot for communicate with us
+                                contact VOX D-CARE's virtual assistant for further entertainment.
+                            </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="{% static 'images/assets/Blog-post/unhealthy.png' %}" class="img" alt="blog1">
+                            </div>
+
+                        </div>
+                        <div class="post-title">
+                            <a >Junk foods can  hamper your development and  may eventually make brain weak and non-functional !</a>
+                            <p>Any food that has no or negligible nutritional value can be considered as junk foods.
+                                Most of the fast foods, including candy, bakery products, burgers and sausages,
+                                salty and oily snacks or soft drinks can be categorized as junk food.
+                                They have a high calorie content, salts and fats.
+                                The more we consume these, the less is the intake of essential nutrients and vitamins in the body.
+
+                                    Consumption of junk food can lead to a lot of health problems, some of them are mentioned below.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <aside class="sidebar">
+                    <div class="category">
+                        <h2 style="margin-left:30px;">Category</h2>
+                        <ul class="category-list">
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                                <a href="{% url 'nutrition' %}" >Nutrition</a>
+
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="200">
+                                <a href="{% url 'workout' %}">Workout</a>
+
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="300">
+                                <a href="{% url 'menu' %}">Menu</a>
+
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                                <a href="{% url 'store' %}">Shopping</a>
+
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                                <a href="{% url 'chat' %}">Chat</a>
+
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                                <a href="{% url 'bmi' %}">BMI</a>
+
+                            </li>
+                        <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                                <a href="{% url 'calorie' %}">Calorie</a>
+
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="popular-post">
+                        <h2 style="margin-left:25px;">Quotes</h2>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/assets/popular-post/food1.jpg' %}" class="img" alt="blog1">
+                                </div>
+
+                            </div>
+                            <div class="post-title">
+                                <a>Good nutrition will prevent 95 percent of all disease.</a>
+
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="300">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/assets/popular-post/workout1.jpg' %}" class="img" alt="blog1">
+                                </div>
+
+                            </div>
+                            <div class="post-title">
+                                <a>Exercise should be regarded as tribute to the heart.</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="400">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/assets/popular-post/workout3.jpg' %}" class="img" alt="blog1">
+                                </div>
+
+                            </div>
+                            <div class="post-title">
+                                <a>To enjoy the glow of good health, You must exercise.</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="500">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/assets/popular-post/unhealthy1.jpg' %}" class="img" alt="blog1">
+                                </div>
+
+                            </div>
+                            <div class="post-title">
+                                <a >Don't ask why healthy food is so expensive. Ask why junk food is so cheap.</a>
+                            </div>
+                        </div>
+                        <div class="post-content" data-aos="flip-up" data-aos-delay="600">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/assets/popular-post/nutrition1.jpg' %}" class="img" alt="blog1">
+                                </div>
+
+                            </div>
+                            <div class="post-title">
+                                <a >Food is our common ground, A universal experience.</a>
+                            </div>
+                        </div>
+
+                          <div class="post-content" data-aos="flip-up" data-aos-delay="600">
+                            <div class="post-image">
+                                <div>
+                                    <img src="{% static 'images/assets/popular-post/doctor1.jpg' %}" class="img" alt="blog1">
+                                </div>
+
+                            </div>
+                            <div class="post-title">
+                                <a >The best investment you've ever make is your own health.</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </aside>
+            </div>
+        </section>
+
+
+
+    </main>
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>Find us</h2>
+                <p>Contact us for further support in your daily routine and food scheduling by the help of below details.  We are always happy to Interact with our users.<br> Keep in touch..
+                <p><i class="fa fa-location-arrow"></i> Palakkad/Kerala</p>
+    <p><i class="fa fa-phone"></i>  +91-9747940333  </p>
+    <p><i class="fa fa fa-envelope"></i> aashy135@gmail.com  </p>
+
+
+            </div>
+            <div class="link" data-aos="fade-right" data-aos-delay="200">
+                <h2>Quick links</h2>
+                <ul class="footer_ul_amrc" >
+    <li><a href="{% url 'nutrition' %}"  style="font-family: var(--Lexend);color: var(--text-light);">Nutrition</a></li>
+
+    <li><a href="{% url 'workout' %}" style="font-family: var(--Lexend);color: var(--text-light);">Workout</a></li>
+    <li><a href="{% url 'menu' %}" style="font-family: var(--Lexend);color: var(--text-light);">Menu</a></li>
+
+    <li><a href="{% url 'chat' %}"style="font-family: var(--Lexend);color: var(--text-light);">Chat</a></li>
+    <li><a href="{% url 'about_us' %}" style="font-family: var(--Lexend);color: var(--text-light);">About Us</a></li>
+    <li><a href="{% url 'terms&conditions' %}" style="font-family: var(--Lexend);color: var(--text-light);">Terms & condition</a></li>
+    <li><a href="{% url 'policy' %}" style="font-family: var(--Lexend);color: var(--text-light);">Privacy Policy</a></li>
+    <li><a href="{% url 'contact' %}"style="font-family: var(--Lexend);color: var(--text-light);">Contact</a></li>
+
+    </ul>
+
+            </div>
+            <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+                <h2>Gallery</h2>
+                <div class="flex-row">
+                    <img src="{% static 'images/assets/instagram/food1.jpg' %}" alt="insta1">
+                    <img src="{% static 'images/assets/instagram/doctor1.jpg' %}" alt="insta2">
+                   </div>
+
+                  <div class="flex-row">
+                      <img src="{% static 'images/assets/instagram/nutrition1.jpg' %}" alt="insta3">
+
+
+                    <img src="{% static 'images/assets/instagram/workout3.jpg' %}" alt="insta4">
+                  </div>
+                <div class="flex-row">
+                    <img src="{% static 'images/assets/instagram/workout1.jpg' %}" alt="insta5">
+                    <img src="{% static 'images/assets/instagram/unhealthy1.jpg' %}" alt="insta6">
+                </div>
+            </div>
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Follow us</h2>
+                <p>Let us be Social</p>
+                <div>
+                   <a href="https://www.facebook.com/" target="-black"> <i class="fa fa-facebook-f"></i></a>
+                  <a href="https://twitter.com/login/" target="-black">  <i class="fa fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/login/" target="-black"><i class="fa fa-instagram"></i></a>
+                   <a href="https://www.instagram.com/" target="-black"> <i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="rights flex-row">
+            <h4 class="text-gray">
+                Copyright ©2021 All rights reserved | made by
+                <a href="{% url 'home' %}" target="_black">D-CARE
+                    </a>
+            </h4>
+        </div>
+
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+
+    <!-- Jquery Library file -->
+    <script src="{% static 'css/Jquery3.4.1.min.js' %}"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="{% static 'css/owl.carousel.min.js' %}"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="{% static 'css/aos.js' %}"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="{% static 'css/main_love.js' %}"></script>
+</body>
+
+</html>

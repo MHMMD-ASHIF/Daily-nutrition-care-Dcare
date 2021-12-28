@@ -1,0 +1,275 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title >Foods For Brain</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:300px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.1);
+    opacity:1;
+    }
+
+    .container .card .circle
+    {
+    position: relative;
+    width:100%;
+    height:100%;
+    background:#000;
+    clip-path:circle(220px at center 0);
+    text-align:center;
+    }
+    .container .card .circle h2
+    {
+    color:#fff;
+    font-size:4.5em;
+    padding:30px 0;
+    }
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:60%;
+        clip-path:circle(220px at center 0);
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1 >FOODS FOR EYES</h1>
+
+
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+          <img src="{% static 'images/eyes/carrots.jpeg'%}">
+        </div>
+        <div class="content">
+            <h2>Carrot</h2><br>
+            <p>Carrots are rich in beta-carotene, which the body utilizes to produce Vitamin A. They are good for lowering cholesterol levels and yes, for improving vision. Vitamin A helps the eye convert light to a signal sent to the brain, allowing you to see better in low light.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/eyes/seeds.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Seeds</h2><br>
+
+            <p>Like hazelnuts, avocados, olive oil and whole grains, sunflowers seeds are rich in vitamin E. This powerful antioxidant vitamin helps maintain good eyesight because it decreases the risk of age-related macular degeneration and cataracts10.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img src="{% static 'images/eyes/orange.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Citrus Fruits</h2><br>
+
+            <p>Oranges. Oranges and other citrus fruit contain vitamin C, which is key for eye health. The vitamin, found mainly in fresh fruits and vegetables, contributes to healthy blood vessels <br>in your eyes it helps to improve eyesight.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/eyes/beef.jpg'%}" >
+        </div>
+        <div class="content">
+                        <h2>Beef</h2><br>
+
+            <p> In moderation, lean beef and poultry can boost your eye health. Beef is rich in vitamin A and zinc, which helps the retina, cornea, and other eye tissues to function properly11, <br>and lowers the risk of macular degeneration.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/eyes/potato.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Sweet Potatoes</h2><br>
+
+            <p>It has carotenoid and antioxidant that promotes night vision and overall good eyesight. It also loaded with vitamins C and E. Diets that are rich in these vitamins can help prevent or delay the development of cataracts and macular degeneration.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+       <img src="{% static 'images/eyes/eggs.jpg'%}" >
+        </div>
+        <div class="content">
+                        <h2>Eggs</h2><br>
+
+            <p> Eggs are a rich source of several B vitamins and choline, which are important for proper brain functioning and development, as well as regulating mood. being deficient in two types of B vitamins — folate and B12 — has been linked to depression.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/eyes/leaf.jpg' %}" >
+
+        </div>
+        <div class="content">
+                        <h2>Leafy Vegetables</h2><br>
+
+            <p> Leafy Greens
+Kale, spinach, and collard greens, for example, are rich in both vitamins C and E. They also have the carotenoids lutein and zeaxanthin. These plant-based forms of vitamin A lower your risk of long-term eye diseases, including AMD and cataracts.</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+      <img src="{% static 'images/eyes/fish.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Fish</h2><br>
+
+            <p>Salmon and other fish have omega-3 fatty acids. These are “healthy” fats. Omega-3 fatty acids can contribute to visual development and the health of the retina in the back of the eye. They can also help prevent dry eyes. It improves quality of vision.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/eyes/nuts.jpg'%}"  >
+
+        </div>
+        <div class="content">
+                        <h2>Nuts</h2><br>
+
+            <p> Almonds, peanuts, pistachios, and cashews are some of the various nuts that are good for the eyes. Nuts are rich in omega-3 fatty acids and vitamin E, which boost your eye health and protect the eye's cells from “free radicals” that could break down the eye's tissue8.</p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/eyes/water.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Water</h2><br>
+
+            <p>Drinking plenty of water on a daily basis can prevent your body and your eyes from becoming dehydrated. Dehydration is severely harmful to your eyes and your organs, if untreated, dehydration can lead to brain damage, seizures, and death.</p>
+        </div>
+    </div>
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/eyes/avocado.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Avocado</h2><br>
+
+            <p>It actually provides nutrients that promote good eye health! The reason avocado is good for your eyes is the high amount of lutein that is found in it. A single ounce of avocado contains 80 micrograms of lutein—most lutein supplements only give you 10 mcg!</p>
+        </div>
+    </div>
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/eyes/banana.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Banana</h2><br>
+
+            <p>banana  boost eye health and prevent vision-related diseases,  Researchers have found that bananas have carotenoid -- a compound that turn fruits and vegetables red, orange or yellow and are converted into vitamin A, important precursors for eye health.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% endblock %}

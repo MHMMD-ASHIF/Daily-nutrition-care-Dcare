@@ -1,0 +1,46 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {margin:0;}
+
+.icon-bar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 16.6%;
+  text-align: center;
+  padding: 2px 0;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 32px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+<body>
+
+<div class="icon-bar">
+  <a class="active" href="{% url 'home' %}"><i class="fa fa-home"></i></a>
+  <a href="{% url 'bmi' %}"><i class="fa fa-calculator"></i></a>
+  <a href="{% url 'calorie' %}"><i class="fa fa-battery"></i></a>
+  <a href="{% url 'store' %}"><i class="fa fa-shopping-cart"></i></a>
+  <a  href="{% url 'chat' %}"><i class="fa fa-weixin"></i></a>
+   <a  href="{% url 'account' %}"><i class="fa fa-user"></i></a>
+
+</div>
+
+</body>
+
+

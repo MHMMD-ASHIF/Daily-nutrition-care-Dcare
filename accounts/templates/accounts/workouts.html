@@ -1,0 +1,350 @@
+
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+
+
+<html>
+<head>
+
+  <link rel="icon" href="{% static 'icons/work_out.png' %}">
+<title>Workout</title>
+  </head>
+<style>
+body {
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 498px;
+  height: 370px;
+    padding: 0 10px;
+        float: left;
+         margin-bottom: 100px;
+  perspective: 1000px;
+
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius:25px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #BBB;
+  border-radius:20px;
+  color: black;
+}
+.flip-card-front img{
+width:474px;
+height:369px;
+border-radius:25px;
+
+}
+
+.flip-card-back {
+  background-color: #364F6B;
+  color: white;
+    border-radius:20px;
+  transform: rotateY(180deg);
+}
+
+
+
+.btn {
+
+    margin-left:25%;
+  position: absolute;
+  top: 90%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  color:black;
+
+  background-color: #F6F7D7;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  font-size: 18px;
+
+
+}
+
+
+
+
+
+	
+
+
+
+
+	.flip-card h1 {
+	color:white;
+
+  .container_fluid .carousel-inner img {
+    height:40vw;}
+    .carousel-inner {
+
+  -webkit-animation: slide 5s forwards infinite;
+}
+.carousel-item active:nth-child(2) {
+  -webkit-animation-delay: 2s;
+}
+.carousel-item:nth-child(3) {
+  -webkit-animation-delay: 5s;
+}
+.carousel-item:nth-child(4) {
+  -webkit-animation-delay: 5s;
+}
+
+
+
+</style>
+
+
+  <div class="container_fluid  ">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner" style="  border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;">
+    <div class="carousel-item active">
+      <img src="{% static 'images/workout/base.jpg'%}" class="d-block w-100"  alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/workout/inter.jpg'%}" class="d-block w-100"  alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/workout/advance.jpg'%}" class="d-block w-100"alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<style>
+  .header{
+  background-color:#fff;
+  background-size: contain;
+  color:#444444;
+  box-shadow: rgba(218, 218, 224, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  height:auto ;
+  width: 95%;
+ margin-left: 2%;
+  overflow: hidden;
+
+ margin-top: 10px;
+ 
+  text-align: justify;
+  
+
+}
+.header:hover{
+  transform: scale(1.003);
+}  
+.header .sub
+{
+
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+} 
+.header h2{
+
+  color: #444;
+  text-align: center;
+  margin-bottom: 2%;
+
+}
+.content{
+  background-color:#fff;
+  background-size: contain;
+  color:#444444;
+  box-shadow: rgba(218, 218, 224, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  height:auto ;
+  width: 95%;
+  margin-left: 2%;
+  overflow: hidden;
+  text-align: justify;
+
+}
+.content:hover{
+  transform: scale(1.002);
+}
+.content h3, h4{
+  color: #444444;
+  margin-left: 8%;
+  margin-bottom: 1%;
+}
+.content h3{
+  margin-top: 2%;
+}
+.content ul{
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<body>
+
+
+<br>
+<div class="header">
+<h2 >WORKOUT AT HOME</h1>
+
+<p class="sub">Regular physical activity can improve your muscle strength and boost your endurance. Exercise delivers oxygen and nutrients to your tissues and helps your cardiovascular system work more efficiently. And when your heart and lung health improve, you have more energy to tackle daily chores.
+              Exercise helps people lose weight and lower the risk of some diseases. Exercising regularly lowers a person's risk of developing some diseases, including obesity, type 2 diabetes, and high blood pressure. Exercise also can help keep your body at a healthy weight. Exercise can help a person age well.</p>
+</div><br>
+<div class="content">
+<h3>Benefits of workout:</h3><br>
+<h4>1. Helps maintain a healthy body weight</h4>
+<ul>
+  <li><p>Low physical activity can increase someone’s risk of becoming overweight or obese. 1 While exercising alone does not necessarily lead to weight loss, in combination with a balanced calorie-controlled diet, it can support successful weight reduction. In addition, there is evidence that regular physical activity can help maintain a healthy body weight over time.</p></li>
+
+</ul>
+<h4>2. Lowers blood pressure</h4>
+<ul>
+
+<li><p>High blood pressure (or hypertension) is a risk factor for many diseases, particularly stroke and heart disease. Regular physical activity can increase your hearts strength, which reduces the effort needed to pump blood around the body. This decreases the force on your arteries, reducing blood pressure. There is good evidence that regular physical activity helps maintain a healthy blood pressure. </p></li>
+</ul>
+
+
+<h4>3. Decreases the risk of heart disease</h4>
+<ul>
+  <li><p>Regular exercise, especially aerobic exercise, such as brisk walking, running and cycling, has been shown to reduce the risk of developing heart disease. 1, 3 This benefit is observed for people of all body sizes. People with overweight or obesity who are physically active are far less likely to get heart disease compared to those who aren’t</p></li>
+</ul>
+
+
+<h4>4. Reduces the risk of certain cancers</h4>
+<ul>
+  <li><p>Cancer is a complex disease influenced by many controllable (e.g. smoking, unhealthy diet, high alcohol consumption) and uncontrollable (e.g. genetics, radiation, environmental pollutants) factors. Evidence suggests that regular moderate to vigorous exercise can help reduce our risk of developing certain types of cancers, including colon, colorectal, lung and breast cancers</p></li>
+</ul>
+
+<h4>5.  Lowers the risk of type 2 diabetes</h4>
+<ul>
+  <li><p>Exercise is known to help in the regulation of blood sugar levels and improves our bodies sensitivity to insulin. Physical inactivity, on the other hand, has been consistently shown to increase the risk of developing type 2 diabetes. 1, 3 Furthermore, regular exercise is often recommended to people with diabetes to aid in their control of blood sugar levels.</p></li>
+</ul>
+
+
+<h4>6. Increases muscle strength and function</h4>
+<ul>
+  <li><p>Skeletal muscle serves many functions, it helps maintain posture, controls movement and generates body heat. As we age, our muscle mass tends to decrease, often due to a more sedentary lifestyle. This loss of muscle mass can reduce our mobility and increase our risk of falls and muscular diseases such as sarcopenia. 5 Regular exercise, particularly resistance training (such as lifting weights or bodyweight exercises such as squats and push-ups) can help improve muscle strength and resilience and reduce our risk of muscular disorders like sarcopenia.</p></li>
+</ul>
+
+
+<h4>7. Improves bone health and strength</h4>
+<ul>
+  <li><p>Weight-bearing exercise (e.g. running,  dancing), as well as resistance training, have been shown to improve bone density in adolescents and help maintain bone density in adulthood, reducing the risk of osteoporosis 1 This is particularly important for older adults and menopausal women as it can help to slow the natural loss of bone density that occurs with age.</p></li>
+</ul>
+
+
+
+<h4>8. Helps to promote positive mental health</h4>
+<ul>
+  <li><p>Regular exercise has been shown to have a positive effect on our mental health and psychological well-being. 1 The exact mechanism for which exercise benefits our mental health is not fully understood. What is known is regular exercise can promote the release of endorphins as well as help relieve stress and promote a healthy sleep pattern, which can all work together to improve our mood. In addition, there is some evidence to suggest that exercise may even help in the treatment of depression and other mental disorders.</p></li>
+</ul>
+
+
+<h4>9. Reduces the risk of dementia</h4>
+<ul>
+  <li><p>Regular exercise has been consistently shown to protect against cognitive decline. 1 Although it is still not fully understood how exercise reduces cognitive decline, recent evidence suggests that the release of proteins known as neurotrophic factors likely play an important role.  These beneficial factors help promote neuron growth and repair which help support normal cognitive functioning. 7 This may partly explain why older adults who remain physically active throughout life have a much lower risk of developing cognitive disorders such as dementia and Alzheimer's disease.</p></li>
+</ul>
+</div><hr>
+<br><br>
+
+
+
+
+
+
+<div class="flip-card  ">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="{% static 'images/workout/slide10.jpg'%}"  alt="Avatar" >
+    </div>
+    <div class="flip-card-back d-flex flex-column"><br>
+      <h1>BEGINNER</h1>
+      <p>Simple and easy workouts for beginners.</p>
+
+     <a class="btn btn-danger " href="{% url 'beginner' %}" >open</a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="flip-card  ">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="{% static 'images/workout/push.jpg'%}"  alt="Avatar" >
+    </div>
+
+
+    <div class="flip-card-back d-flex flex-column"><br>
+      <h1>INTERMEDIATES</h1>
+        <p>Little advanced workouts for Intermediates</p>
+
+     <a class="btn btn-danger " href="{% url 'intermediate' %}" >open</a>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card  ">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="{% static 'images/workout/slide3.jpg'%}"  alt="Avatar" >
+    </div>
+    <div class="flip-card-back d-flex flex-column"><br>
+      <h1>ADVANCED</h1>
+      <p>Advanced strengthening workouts.</p>
+
+     <a class="btn btn-danger " href="{% url 'advance' %}" >open</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

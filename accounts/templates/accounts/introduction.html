@@ -1,0 +1,111 @@
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/introduction.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="icon" href="{% static 'icons/health.png' %}">
+    <title>D-CARE </title>
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">D-CARE</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="{% static 'videos/video.mp4' %}" autoplay muted loop></video>
+      <video class="video-slide" src="{% static 'videos/home1.mp4' %}" autoplay muted loop></video>
+      <video class="video-slide" src="{% static 'videos/video12.mp4' %}" autoplay muted loop></video>
+      <video class="video-slide" src="{% static 'videos/video5.mp4' %}" autoplay muted loop></video>
+      <video class="video-slide" src="{% static 'videos/video1.mp4' %}" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Good food <br><span>Good mood</span></h1>
+        <p>Good food is essential for better health.Food can be very transformational, and it can be more than just about a dish. That’s what happened to me when I first went to France. I fell in love. And if you fall in love, well, then everything is easy.</p>
+        <a href="{% url 'login' %}">LOGIN</a><a href="{% url 'register' %}">SIGNUP</a>
+      </div>
+      <div class="content">
+        <h1>Life is infinitely <br><span>delicious </span></h1>
+        <p>Growing up, I spent my childhood summers on my mother’s family farm in Puglia where I learned to make fresh pasta and olive oil and jar tomato sauce from my mother and several of her sisters. Delicious foods are always make the people intellectual and it keeps good mood. </p>
+
+      </div>
+      <div class="content">
+        <h1>Savor the<br><span>Flavor</span></h1>
+        <p>All happiness depends on a leisurely breakfast. Healthy and delicious foods makes Good mood and provides better health. People who always eat fresh foods they have better health and mood. Yummy and spicy foods make people curious and Happy. </p>
+
+      </div>
+      <div class="content">
+        <h1>Every  <br><span>step is progress.</span></h1>
+        <p>You dream. You plan. You reach. There will be obstacles. There will be doubters. There will be mistakes. But with hard work, with belief, with confidence and trust in yourself and those around you, there are no limits. Pain is temporary, Quitting lasts forever So keep workout.</p>
+
+      </div>
+      <div class="content">
+        <h1>Food is a <br><span> tasty hug.</span></h1>
+        <p>Food is symbolic of love when words are inadequate. The people who give you their food give you their heart. The dinner hour is a scared, happy time when everyone should be together and relaxed.</p>
+
+      </div>
+      <div class="media-icons">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>

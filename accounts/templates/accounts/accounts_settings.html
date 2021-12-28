@@ -1,0 +1,705 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{%block content %}
+<head>
+<style>
+
+
+
+
+
+h1,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: .5rem;
+  color: #32325d;
+}
+
+h1,
+.h1 {
+  font-size: 1.625rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.0625rem;
+}
+
+h4,
+.h4 {
+  font-size: .9375rem;
+}
+
+h5,
+.h5 {
+  font-size: .8125rem;
+}
+
+h6,
+.h6 {
+  font-size: .625rem;
+}
+
+.display-2 {
+  font-size: 2.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+.col-4,
+.col-8,
+.col,
+.col-md-10,
+.col-md-12,
+.col-lg-3,
+.col-lg-4,
+.col-lg-6,
+.col-lg-7,
+.col-xl-4,
+.col-xl-6,
+.col-xl-8 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col {
+  max-width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+
+@media (min-width: 992px) {
+
+  .col-lg-3 {
+    max-width: 25%;
+    flex: 0 0 25%;
+  }
+
+  .col-lg-4 {
+    max-width: 33.33333%;
+    flex: 0 0 33.33333%;
+  }
+
+  .col-lg-6 {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  .col-lg-7 {
+    max-width: 58.33333%;
+    flex: 0 0 58.33333%;
+  }
+
+  .order-lg-2 {
+    order: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .col-xl-4 {
+    max-width: 33.33333%;
+    flex: 0 0 33.33333%;
+  }
+
+  .col-xl-6 {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  .col-xl-8 {
+    max-width: 66.66667%;
+    flex: 0 0 66.66667%;
+  }
+
+  .order-xl-1 {
+    order: 1;
+  }
+
+  .order-xl-2 {
+    order: 2;
+  }
+}
+
+.form-control {
+  font-size: 1rem;
+  line-height: 1.5;
+  display: block;
+  width: 100%;
+  height: calc(2.75rem + 2px);
+  padding: .625rem .75rem;
+  transition: all .2s cubic-bezier(.68, -.55, .265, 1.55);
+  color: #8898aa;
+  border: 1px solid #cad1d7;
+  border-radius: .375rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  box-shadow: none;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .form-control {
+    transition: none;
+  }
+}
+
+.form-control::-ms-expand {
+  border: 0;
+  background-color: transparent;
+}
+
+.form-control:focus {
+  color: #8898aa;
+  border-color: rgba(50, 151, 211, .25);
+  outline: 0;
+  background-color: #fff;
+  box-shadow: none, none;
+}
+
+.form-control:-ms-input-placeholder {
+  opacity: 1;
+  color: #adb5bd;
+}
+
+.form-control::-ms-input-placeholder {
+  opacity: 1;
+  color: #adb5bd;
+}
+
+.form-control::placeholder {
+  opacity: 1;
+  color: #adb5bd;
+}
+
+.form-control:disabled,
+.form-control[readonly] {
+  opacity: 1;
+  background-color: #e9ecef;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+
+.card-header {
+  margin-bottom: 0;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+  background-color: #fff;
+}
+
+
+.media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.media-body {
+  flex: 1 1;
+}
+
+.bg-secondary {
+  background-color: #f7fafc !important;
+}
+
+
+
+.mt--7 {
+  margin-top: -6rem !important;
+}
+
+
+.bg-gradient-default {
+  background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;
+}
+
+.bg-gradient-default {
+  background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;
+}
+
+
+
+
+.opacity-8 {
+  opacity: .8 !important;
+}
+
+.opacity-8 {
+  opacity: .9 !important;
+}
+
+
+
+
+.avatar {
+  font-size: 1rem;
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #adb5bd;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.avatar-sm {
+  font-size: .875rem;
+  width: 36px;
+  height: 36px;
+}
+
+
+
+
+
+.card-profile-image {
+  position: relative;
+}
+
+.card-profile-image img {
+  position: absolute;
+  left: 50%;
+  max-width: 180px;
+  transition: all .15s ease;
+  transform: translate(-50%, -30%);
+  border-radius: .375rem;
+}
+
+.card-profile-image img:hover {
+  transform: translate(-50%, -33%);
+}
+
+.card-profile-stats {
+  padding: 1rem 0;
+}
+
+.card-profile-stats>div {
+  margin-right: 1rem;
+  padding: .875rem;
+  text-align: center;
+}
+
+.card-profile-stats>div:last-child {
+  margin-right: 0;
+}
+
+
+.main-content {
+  position: relative;
+
+}
+
+.main-content .navbar-top {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  background-color: transparent;
+}
+
+
+
+
+.footer {
+  padding: 2.5rem 0;
+  background: #f7fafc;
+}
+
+
+.form-control-label {
+  font-size: .875rem;
+  font-weight: 600;
+  color: #525f7f;
+}
+
+.form-control {
+  font-size: .875rem;
+}
+
+
+
+
+
+.header {
+  position: relative;
+}
+
+
+
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .15s ease;
+}
+
+
+
+  @ keyframes show-navbar-dropdown {
+    0% {
+      transition: visibility .25s, opacity .25s, transform .25s;
+      transform: translate(0, 10px) perspective(200px) rotateX(-2deg);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes hide-navbar-dropdown {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      transform: translate(0, 10px);
+      opacity: 0;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-nav .nav-link {
+    padding: .625rem 0;
+    color: #172b4d !important;
+  }
+
+  .navbar-nav .dropdown-menu {
+    min-width: auto;
+    box-shadow: none;
+  }
+}
+
+@keyframes show-navbar-collapse {
+  0% {
+    transform: scale(.95);
+    transform-origin: 100% 0;
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes hide-navbar-collapse {
+  from {
+    transform: scale(1);
+    transform-origin: 100% 0;
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(.95);
+    opacity: 0;
+  }
+}
+
+.progress {
+  overflow: hidden;
+  height: 8px;
+  margin-bottom: 1rem;
+  border-radius: .25rem;
+  background-color: #e9ecef;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.description {
+  font-size: .875rem;
+}
+
+.heading {
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+.heading-small {
+  font-size: .75rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.display-2 span {
+  font-weight: 300;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    margin-bottom: 10px;
+  }
+}
+
+#navbar .navbar {
+  margin-bottom: 20px;
+}
+</style>
+
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+</head>
+<link rel="icon" href="{% static 'icons/profile.png' %}">
+<body>
+<br>
+  <div class="main-content">
+{% csrf_token %}
+
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="#" target="_blank">User profile</a>
+
+        <ul class="navbar-nav align-items-center d-none d-md-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+
+
+                <span class="avatar avatar-sm rounded-circle">
+                  {% if request.user.users.profile_pic %}
+                  <img src="{{request.user.users.profile_pic.url}}" >
+                                {% else %}
+            <img src="{% static 'images/nutrition/fattyfish.jpg'%}" class="rounded-circle">
+    {% endif %}
+                </span>
+
+
+                <div class="media-body ml-2 d-none d-lg-block">
+                  <span class="mb-0 text-sm  font-weight-bold">{{user.username}}</span>
+                </div>
+              </div>
+            </a>
+
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url('{% static 'images/slide5.jpg'%}'); background-size: cover; background-position: center top;">
+      <!-- Mask -->
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <!-- Header container -->
+      <div class="container-fluid d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="display-2 text-white">Hello {{user.username}}</h1>
+            <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made and update your profile.</p>
+             <a href="{% url 'edit'  %}" class="btn btn-info">Edit profile</a>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--7" >
+      <div class="row" >
+        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0" >
+          <div class="card card-profile shadow" >
+            <div class="row justify-content-center" >
+              <div class="col-lg-3 order-lg-2" >
+                <div class="card-profile-image" >
+
+                  <a href="#">
+
+                         {% if request.user.users.profile_pic %}
+
+
+                    <img src="{{request.user.users.profile_pic.url}}" class="rounded-circle">
+
+
+                        {% else %}
+            <img src="{% static 'images/nutrition/fattyfish.jpg'%}" class="rounded-circle">
+                  {% endif %}
+                     </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body pt-0 pt-md-4">
+              <div class="row">
+                <div class="col">
+                  <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+
+
+
+                  </div>
+                </div>
+              </div>
+
+                <br>
+                <br>
+              <div class="text-center">
+                <h3>
+                  {{user.username}}
+                </h3>
+                 <div >
+
+                     <a class="btn bt-danger"   style="text-align:right;background-color:red;color:white" href="{% url 'logout' %}">Logout</a>
+
+                    </div>
+
+
+                <hr class="my-4">
+
+                <h3 >About Me </h3><br>{{user.users.about_me}}
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8 order-xl-1">
+          <div class="card bg-secondary shadow">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">My account</h3>
+                </div>
+
+              </div>
+            </div>
+            <div class="card-body" >
+              <form>
+                <h6 class="heading-small text-muted mb-4">User information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-username">Username</label>
+                        <span  id="input-username" class="form-control form-control-alternative" >{{user.username}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-email">Email address</label>
+                        <span  id="input-email" class="form-control form-control-alternative" >{{user.email}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+
+                        <label class="form-control-label" for="input-first-name">First name</label>
+                        <span id="input-first-name" class="form-control form-control-alternative"> {{user.first_name}}</span>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-last-name">Last name</label>
+                        <span  id="input-last-name" class="form-control form-control-alternative" >{{user.last_name}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <!-- Address -->
+                <h6 class="heading-small text-muted mb-4">Contact information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-address">Address</label>
+                        <span id="input-address" class="form-control form-control-alternative" >{{user.users.address}}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-city">City</label>
+                        <span id="input-city" class="form-control form-control-alternative"> {{user.users.city}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-country">Country</label>
+                        <span  id="input-country" class="form-control form-control-alternative" >{{user.users.country}}</span>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-country">Phone</label>
+                        <span id="input-postal-code" class="form-control form-control-alternative">{{user.users.phone}}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="row align-items-center justify-content-xl-between">
+      <div class="col-xl-6 m-auto text-center">
+        <div class="copyright">
+          <p class="text-center">Copyright @2021 | Designed With by <a href="{% url 'home' %}">D-CARE</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+
+
+{% endblock %}

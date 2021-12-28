@@ -1,0 +1,279 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title >Foods For Hair</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:300px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.1);
+    opacity:1;
+    }
+
+    .container .card .circle
+    {
+    position: relative;
+    width:100%;
+    height:100%;
+    background:#000;
+    clip-path:circle(220px at center 0);
+    text-align:center;
+    }
+    .container .card .circle h2
+    {
+    color:#fff;
+    font-size:4.5em;
+    padding:30px 0;
+    }
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:60%;
+        clip-path:circle(220px at center 0);
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>FOODS FOR HAIR</h1>
+
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+          <img src="{% static 'images/hair/avocado.jpg'%}" >
+        </div>
+        <div class="content">
+            <h2>Avocado</h2><br>
+            <p>Avocado is a great source of biotin, and adding this B-complex vitamin back into the diet  help hair to grow more healthily. Avocado oil including potassium and magnesium,  seal cuticle cells, which can help hair look smooth and shiny and prevent it from breaking.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/hair/fattyfish.jpg'%}">
+        </div>
+        <div class="content">
+            <h2>Fatty Fish</h2><br>
+
+            <p>Consuming omega fatty acids can help to improve your hair from the inside, since they are filled with nutrients and proteins. Taking an omega supplement along with antioxidants helps to improve hair density <br>and diameter. It also reduces hair loss.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img src="{% static 'images/hair/orange.jpg' %}">
+        </div>
+        <div class="content">
+                        <h2>Orange</h2><br>
+
+            <p>Oranges are rich in antioxidants, they play a major role in facilitating hair growth. The antioxidants fight off free radicals, preventing hair damage and boosting hair growth. Oranges also contain vitamin B12 and vitamin E that further helps in repairing  hair follicles.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/hair/berries.jpg'%}" >
+        </div>
+        <div class="content">
+                        <h2>Berries</h2><br>
+
+            <p>Berries. Berries are loaded with beneficial compounds and vitamins that may promote hair growth. This includes vitamin C, which has strong antioxidant properties. Antioxidants can help protect hair follicles against damage from harmful molecules called free radicals.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/hair/eggs.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Eggs</h2><br>
+
+            <p>The yolk may be especially useful to moisturize hair that appears dry. Egg yolk can be superfood for your hair due to the unique combination of vitamins found inside. Vitamins A and E, biotin, and folate are helped for hair growth and healthy hair. </p>
+        </div>
+    </div>
+
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/hair/nuts.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Nuts</h2><br>
+
+            <p>Nuts are excellent sources of nutrients, particularly biotin, B-vitamins, omega 3 and 6 fatty acids, plenty of protein and magnesium, all of which strengthen hair cuticles and nourish the scalp. Adding  nuts to your diet will help reduce thinning and promote hair growth. </p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+<img src="{% static 'images/hair/spinach.jpg' %}">
+        </div>
+        <div class="content">
+                        <h2>Spinach</h2><br>
+
+            <p> Spinach is  loaded with beneficial nutrients like folate, iron, and vitamins A and C, all of which may promote hair growth. Vitamin A helps the skin glands produce sebum.Spinach is also a great plant-based source of iron, which is essential for hair growth.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/hair/banana.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Banana</h2><br>
+
+            <p>Bananas have potassium which softens hair and helps in hair growth too. This delicious and healthy fruit also has natural oils that maintain the natural elasticity of the hair and prevent hair breakage. Add bananas to your daily diet.</p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/hair/papaya.png'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Papaya</h2><br>
+
+            <p>The nutrients in papaya help prevent balding. Eating the fruit atleast thrice a week can help reduce hair thinning. ... Natural conditioner: As it is rich in minerals, vitamins and enzymes, papaya acts as a natural conditioner, making your hair softer and smoother.</p>
+        </div>
+    </div>
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/hair/seeds.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Seeds</h2><br>
+
+            <p>seeds are full of nutritious components like minerals, vitamins, phytosterols <br>and polyunsaturated fatty acids. Including til in your diet will help you supplement the nutritional requirements for healthy hair growth, and improve the shine and quality of your mane.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+         <div class="card">
+        <div class="circle">
+<img src="{% static 'images/hair/meat.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Meat</h2><br>
+
+            <p>Meat. Meat is a staple in many people's diet and is rich in nutrients that may aid hair growth. The protein in meat aids growth and helps repair and strengthen hair follicles. A 3.5-ounce (100-gram) serving of cooked sirloin steak provides as much as 29 grams of protein.</p>
+        </div>
+    </div>
+
+
+             <div class="card">
+        <div class="circle">
+       <img src="{% static 'images/hair/beans.jpg'%}">
+        </div>
+        <div class="content">
+                        <h2>Beans</h2><br>
+
+            <p>Beans. Beans are a great plant-based source of protein, which is essential to hair growth. Like oysters, beans are a good source of zinc, which aids the hair growth and repair cycle. ... They also provide many other hair-healthy nutrients, including iron, biotin and folat</p>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% endblock %}

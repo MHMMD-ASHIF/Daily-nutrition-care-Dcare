@@ -1,0 +1,278 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <title >Foods For Brain</title>
+
+    <style type="text/css">
+    @import url('http://fonts.googleapis.com/css2?family=Poppins:wght300;400;500;600;700;800;900&display=swap');
+    *{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .container
+    {
+    position: relative;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
+    }
+    .container .card
+    {
+    position: relative;
+    width:300px;
+    height:500px;
+    background:#fff;
+    margin: 10px;
+    border-radius:20px;
+    overflow: hidden;
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+    transaction:0.5s;
+    margin-bottom:5%;
+    }
+
+    .container .card:hover {
+  filter: blur(0px);
+    transform:scale(1.1);
+    opacity:1;
+    }
+
+    .container .card .circle
+    {
+    position: relative;
+    width:100%;
+    height:100%;
+    background:#000;
+    clip-path:circle(220px at center 0);
+    text-align:center;
+    }
+    .container .card .circle h2
+    {
+    color:#fff;
+    font-size:4.5em;
+    padding:30px 0;
+    }
+
+        .container .card .circle img{
+         position: relative;
+        width:100%;
+    height:60%;
+        clip-path:circle(220px at center 0);
+
+
+        }
+    .container .card .content
+    {
+    position:absolute;
+    bottom:5px;
+    padding:5px;
+
+    text-align:center;
+    }
+
+
+    .container .card .content p
+    {
+    color:#444444;
+    }
+body h1
+{
+color:gray;
+text-align:center;
+
+margin-top:2%;
+margin-bottom:2%;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>FOODS FOR LIVER</h1>
+
+<div class="container">
+
+      <div class="card">
+        <div class="circle">
+          <img src="{% static 'images/liver/avocado.jpg'%}" >
+        </div>
+        <div class="content">
+            <h2>Avocado</h2><br>
+            <p>People who eat avocados are also more likely to have a lower body mass index. They also have higher levels of HDL (good) cholesterol. It’s thought that some of these effects are related to the high fiber, healthy oil, and water content of avocados.</p>
+        </div>
+    </div>
+ <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/liver/fattyfish.jpg'%}" >
+        </div>
+        <div class="content">
+            <h2>Fatty Fish</h2><br>
+
+            <p>Fatty fish such as salmon, sardines, tuna, and trout are high in omega-3 fatty acids. Omega-3 fatty acids can help improve liver fat levels and bring down inflammation . Try this teriyaki halibut recipe, recommended by the Canadian Liver Foundation.</p>
+        </div>
+    </div>
+
+     <div class="card">
+        <div class="circle">
+         <img src="{% static 'images/liver/grapes.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Grapes Juice</h2><br>
+
+            <p> Grapefruit contains antioxidants that naturally protect the liver. Studies have also shown that Antioxidants can help reduce the development of hepatic fibrosis, a harmful condition in which excessive connective tissue builds up in the liver.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/liver/blueberries.png'%}" >
+        </div>
+        <div class="content">
+                        <h2>Blue Berries</h2><br>
+
+            <p> Blueberries help protect you against nonalcoholic liver disease, which goes hand in hand with obesity and high cholesterol. If blueberries aren't your thing, other foods rich in polyphenols include dark chocolate, olives, and plums.</p>
+        </div>
+    </div>
+
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/liver/beetroot.jpg'%}">
+
+        </div>
+        <div class="content">
+                        <h2>Beetroot Juice</h2><br>
+
+            <p> Beetroot juice helps protect the liver from oxidative damage and inflammation, all while increasing its natural detoxification enzymes. Mostly beetroot juice can protect from liver deceases, and it keeps the liver as healthy. </p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+       <img src="{% static 'images/liver/nuts.jpg'%}" >
+        </div>
+        <div class="content">
+                        <h2>Nuts</h2><br>
+
+            <p>Nuts consumption is nutrient-dense snacks that are also high in healthy fats. Aside from boosting cardiovascular health, nuts may also help reduce the incidence of liver disease. Of all types of nuts, walnuts are amongst the most beneficial for reducing  liver disease. </p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/liver/coffee.jpg' %}" >
+
+        </div>
+        <div class="content">
+                        <h2>Coffee</h2><br>
+
+            <p> coffee has been associated with improved outcomes with chronic liver disease, hepatocellular cancer (HCC), cirrhosis, colorectal cancer, esophageal cancer, breast cancer, prostate cancer, pancreatic cancer, ovarian cancer, kidney cancer, hepatitis B virus (HBV).</p>
+        </div>
+    </div>
+
+
+
+     <div class="card">
+        <div class="circle">
+      <img src="{% static 'images/liver/tea.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Tea</h2><br>
+
+            <p>Tea is widely considered to be beneficial for health, but evidence has shown that it may have particular benefits for the liver. One Japanese study found that drinking 10 cups of green tea per day was associated with improved blood markers of liver health.</p>
+        </div>
+    </div>
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/liver/oliveoil.jpg'%}"  >
+
+        </div>
+        <div class="content">
+                        <h2>Olive Oil</h2><br>
+
+            <p>In relation to diet, it has been proven that olive oil can have a beneficial effect. Several studies conclude that its intake can significantly reduce the deposit of fat in the liver. A Mediterranean diet rich in olive oil also reduces the risk of nonalcoholic fatty liver disease.</p>
+        </div>
+    </div>
+
+
+
+
+     <div class="card">
+        <div class="circle">
+        <img src="{% static 'images/liver/pear.jpg'%}" >
+
+        </div>
+        <div class="content">
+                        <h2>Prickly Pear</h2><br>
+
+            <p>the studies thus far have demonstrated that prickly pear has positive effects on the liver. Prickly pear fruit and juice may help with hangover symptoms by reducing inflammation. They may also help protect the liver from damage caused by alcohol consumption.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+         <div class="card">
+        <div class="circle">
+    <img src="{% static 'images/muscles/beans.jpg' %}" >
+
+        </div>
+        <div class="content">
+                        <h2>Beans</h2><br>
+
+            <p>What's more, they are excellent sources of fiber and B vitamins, in addition to being high in magnesium, phosphorus and iron. For these reasons, beans are a good source of plant-based protein to add to your diet. Beans can repair the muscle.</p>
+        </div>
+    </div>
+
+
+
+         <div class="card">
+        <div class="circle">
+<img src="{% static 'images/muscles/peanuts.jpg' %}" >
+        </div>
+        <div class="content">
+                        <h2>Peanuts</h2><br>
+
+            <p>Gym goers need to consume protein in high doses to aid muscle growth and recovery. Peanuts are an excellent source of protein, with 25.8 grams of protein per 100 grams. Peanut butter is an easy to consume snack which fulfils a large part of most gymmers' protein.</p>
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+{% endblock %}
